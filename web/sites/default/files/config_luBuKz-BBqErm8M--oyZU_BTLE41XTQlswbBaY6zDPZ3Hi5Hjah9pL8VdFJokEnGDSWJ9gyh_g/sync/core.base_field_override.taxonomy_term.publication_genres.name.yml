@@ -1,0 +1,18 @@
+uuid: 53e147aa-07d9-407d-98d1-7b5e8392edb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.publication_genres
+id: taxonomy_term.publication_genres.name
+field_name: name
+entity_type: taxonomy_term
+bundle: publication_genres
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

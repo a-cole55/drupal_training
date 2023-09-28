@@ -1,0 +1,33 @@
+uuid: f4d07c82-eaa5-428d-9359-0d197220771a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: author
+label: Author
+type: 'canonical_entities:node'
+pattern: '/bookstore/author/[node:title]'
+selection_criteria:
+  bb2f9097-05ff-4948-828c-295f6869c0df:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: bb2f9097-05ff-4948-828c-295f6869c0df
+    context_mapping:
+      node: node
+    bundles:
+      author: author
+  ff982718-fa3a-4be4-a2ad-075daca97d70:
+    id: language
+    negate: false
+    uuid: ff982718-fa3a-4be4-a2ad-075daca97d70
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

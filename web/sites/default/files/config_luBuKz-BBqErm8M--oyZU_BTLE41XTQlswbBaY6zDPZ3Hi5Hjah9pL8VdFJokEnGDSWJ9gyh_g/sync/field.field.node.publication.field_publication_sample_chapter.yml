@@ -1,0 +1,27 @@
+uuid: 570db6c4-299e-4813-851b-b1bfbebcebe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_sample_chapter
+    - node.type.publication
+  module:
+    - file
+id: node.publication.field_publication_sample_chapter
+field_name: field_publication_sample_chapter
+entity_type: node
+bundle: publication
+label: 'Sample chapter'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: bookstore/publications
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

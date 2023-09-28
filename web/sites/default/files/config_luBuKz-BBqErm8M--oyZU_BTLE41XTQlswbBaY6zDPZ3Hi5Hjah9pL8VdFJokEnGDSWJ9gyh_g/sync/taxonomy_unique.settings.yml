@@ -1,0 +1,12 @@
+countries: 1
+countries_message: 'Term %term already exists in vocabulary %vocabulary.'
+sections: 1
+sections_message: 'Term %term already exists in vocabulary %vocabulary.'
+animals: 1
+animals_message: 'Term %term already exists in vocabulary %vocabulary.'
+languages: 0
+languages_message: 'Term %term already exists in vocabulary %vocabulary.'
+publishers: 0
+publishers_message: 'Term %term already exists in vocabulary %vocabulary.'
+publication_genres: 0
+publication_genres_message: 'Term %term already exists in vocabulary %vocabulary.'

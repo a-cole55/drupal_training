@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 8a350f44-8e64-41bc-885e-846a7e6413d8
+name: 'Expert in Drupal 9 Site Building'
+mail: arniqua_c@yahoo.com
+slogan: 'Drupal Today, Drupal Tomorrow'
+page:
+  403: ''
+  404: /search404
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

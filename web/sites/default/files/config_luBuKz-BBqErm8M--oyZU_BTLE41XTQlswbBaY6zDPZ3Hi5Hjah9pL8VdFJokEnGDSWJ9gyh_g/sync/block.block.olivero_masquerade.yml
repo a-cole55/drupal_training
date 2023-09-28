@@ -1,0 +1,20 @@
+uuid: 95d99470-91a7-4f11-abbc-ddb900663676
+langcode: en
+status: true
+dependencies:
+  module:
+    - masquerade
+  theme:
+    - olivero
+id: olivero_masquerade
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: masquerade
+settings:
+  id: masquerade
+  label: Masquerade
+  label_display: visible
+  provider: masquerade
+visibility: {  }

@@ -1,0 +1,35 @@
+uuid: 5e701775-e09e-45f1-a643-ab765618cfbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: photo_author_large
+label: 'Photo Author Large'
+effects:
+  56104808-e7ff-46bb-9db2-a85dc71c8e95:
+    uuid: 56104808-e7ff-46bb-9db2-a85dc71c8e95
+    id: image_scale
+    weight: 1
+    data:
+      width: 450
+      height: null
+      upscale: false
+  4749f3f2-39c9-4e33-8fb0-d0230eb71153:
+    uuid: 4749f3f2-39c9-4e33-8fb0-d0230eb71153
+    id: image_effects_watermark
+    weight: 2
+    data:
+      watermark_image: sites/default/files/watermark.png
+      watermark_width: 30%
+      watermark_height: 30%
+      placement: center-center
+      x_offset: ''
+      y_offset: ''
+      opacity: 20
+  820b7ed3-97a5-4592-b82b-7b5805e6d3e8:
+    uuid: 820b7ed3-97a5-4592-b82b-7b5805e6d3e8
+    id: image_effects_brightness
+    weight: 3
+    data:
+      level: 5

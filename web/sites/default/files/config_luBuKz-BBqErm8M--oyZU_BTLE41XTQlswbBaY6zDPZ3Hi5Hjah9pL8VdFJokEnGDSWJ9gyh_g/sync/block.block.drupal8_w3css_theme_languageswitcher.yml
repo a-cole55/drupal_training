@@ -1,0 +1,20 @@
+uuid: e1f86210-4126-40fe-82c2-8b1b4f88afb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - drupal8_w3css_theme
+id: drupal8_w3css_theme_languageswitcher
+theme: drupal8_w3css_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility: {  }

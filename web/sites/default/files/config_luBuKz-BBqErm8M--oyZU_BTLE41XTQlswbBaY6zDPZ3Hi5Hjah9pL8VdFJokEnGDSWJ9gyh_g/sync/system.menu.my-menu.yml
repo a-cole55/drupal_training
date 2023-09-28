@@ -1,0 +1,8 @@
+uuid: e0284640-79a6-4705-9ea7-8cc1014c5600
+langcode: en
+status: true
+dependencies: {  }
+id: my-menu
+label: 'My menu'
+description: 'Menu of links to my favourite pages'
+locked: false

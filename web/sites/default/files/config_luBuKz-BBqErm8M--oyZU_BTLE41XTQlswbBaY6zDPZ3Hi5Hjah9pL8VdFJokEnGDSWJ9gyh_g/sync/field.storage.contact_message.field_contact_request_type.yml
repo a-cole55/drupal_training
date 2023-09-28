@@ -1,0 +1,30 @@
+uuid: af98ee41-ec01-4877-94a9-0dce1a5c0829
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_contact_request_type
+field_name: field_contact_request_type
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Additional information'
+    -
+      value: '2'
+      label: Suggestion
+    -
+      value: '3'
+      label: Claim
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

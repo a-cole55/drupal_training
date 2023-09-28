@@ -1,0 +1,33 @@
+uuid: 381e4e0c-4007-498d-b596-611e72779b32
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: autor
+label: 'Author es'
+type: 'canonical_entities:node'
+pattern: '/libreria/autur/[node:title]'
+selection_criteria:
+  dc75cad5-23ae-438d-947d-a7b136f13248:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: dc75cad5-23ae-438d-947d-a7b136f13248
+    context_mapping:
+      node: node
+    bundles:
+      author: author
+  0ff705d6-f053-436f-9e8b-91f2187b56ca:
+    id: language
+    negate: false
+    uuid: 0ff705d6-f053-436f-9e8b-91f2187b56ca
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

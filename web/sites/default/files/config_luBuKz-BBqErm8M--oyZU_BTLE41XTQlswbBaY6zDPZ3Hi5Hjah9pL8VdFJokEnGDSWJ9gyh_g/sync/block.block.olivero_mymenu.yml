@@ -1,0 +1,25 @@
+uuid: ebfb2fd3-7787-48bc-b1be-fb669230fd70
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.my-menu
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_mymenu
+theme: olivero
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:my-menu'
+settings:
+  id: 'system_menu_block:my-menu'
+  label: 'My menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

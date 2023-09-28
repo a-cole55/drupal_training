@@ -1,0 +1,11 @@
+uuid: 823fa80f-2437-44b5-8125-e6f40dd6f687
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.publishers
+id: taxonomy_term.publishers
+target_entity_type_id: taxonomy_term
+target_bundle: publishers
+default_langcode: site_default
+language_alterable: true

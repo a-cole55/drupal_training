@@ -1,0 +1,21 @@
+uuid: d71338a6-116c-4e23-a5ed-5b54f2b14e28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author_highlighted
+    - node.type.author
+id: node.author.field_author_highlighted
+field_name: field_author_highlighted
+entity_type: node
+bundle: author
+label: 'Highlighted Author'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

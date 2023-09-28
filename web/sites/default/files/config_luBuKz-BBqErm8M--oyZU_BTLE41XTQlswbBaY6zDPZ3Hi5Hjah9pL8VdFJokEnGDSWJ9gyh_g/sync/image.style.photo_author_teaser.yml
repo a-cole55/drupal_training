@@ -1,0 +1,20 @@
+uuid: 35f0d019-ccc8-44a4-9204-69e39ca75c0e
+langcode: en
+status: true
+dependencies: {  }
+name: photo_author_teaser
+label: 'Photo Author Teaser'
+effects:
+  24fa02ed-7170-4cbe-b0a7-483f37f3767f:
+    uuid: 24fa02ed-7170-4cbe-b0a7-483f37f3767f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 250
+      anchor: center-center
+  a5d0fef1-4151-4870-8831-a502976fcebf:
+    uuid: a5d0fef1-4151-4870-8831-a502976fcebf
+    id: image_desaturate
+    weight: 2
+    data: {  }

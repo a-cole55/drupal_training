@@ -1,0 +1,11 @@
+uuid: d4cbf0a0-d1cd-4239-b745-90c06d464edd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.publication_genres
+id: taxonomy_term.publication_genres
+target_entity_type_id: taxonomy_term
+target_bundle: publication_genres
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,8 @@
+uuid: a3caf105-2a24-4998-bbf9-e0a3eae4e677
+langcode: en
+status: true
+dependencies: {  }
+name: Publishers
+vid: publishers
+description: ''
+weight: 0

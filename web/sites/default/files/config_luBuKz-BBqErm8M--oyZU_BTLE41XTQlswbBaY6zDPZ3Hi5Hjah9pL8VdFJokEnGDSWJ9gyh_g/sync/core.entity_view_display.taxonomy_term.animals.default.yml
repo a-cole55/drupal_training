@@ -1,0 +1,35 @@
+uuid: fe168ca0-a5ca-4348-9f1d-7ea7d74dce82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.animals.field_icon
+    - taxonomy.vocabulary.animals
+  module:
+    - image
+    - text
+id: taxonomy_term.animals.default
+targetEntityType: taxonomy_term
+bundle: animals
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

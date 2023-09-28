@@ -1,0 +1,39 @@
+uuid: dc73d57c-c0ba-4f76-87a2-ddfa716571f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.news_comments
+    - field.field.comment.news_comments.comment_body
+    - field.field.comment.news_comments.field_news_like
+  module:
+    - text
+id: comment.news_comments.default
+targetEntityType: comment
+bundle: news_comments
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_news_like:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

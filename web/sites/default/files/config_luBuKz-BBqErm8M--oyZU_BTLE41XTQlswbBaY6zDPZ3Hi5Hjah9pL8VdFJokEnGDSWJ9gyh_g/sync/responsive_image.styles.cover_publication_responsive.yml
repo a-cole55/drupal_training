@@ -1,0 +1,115 @@
+uuid: d9e6cf75-2a59-470d-a720-a01c4c9696b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.cover_publication_large
+    - image.style.cover_publication_medium
+    - image.style.cover_publication_small
+  theme:
+    - drupal8_w3css_theme
+id: cover_publication_responsive
+label: 'Cover publication responsive'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_large
+    breakpoint_id: drupal8_w3css_theme.screen-xxlg-min
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_large
+    breakpoint_id: drupal8_w3css_theme.screen-xxlg-min
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_large
+    breakpoint_id: drupal8_w3css_theme.screen-xxlg-min
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_large
+    breakpoint_id: drupal8_w3css_theme.screen-xxlg-min
+    multiplier: 3x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_large
+    breakpoint_id: drupal8_w3css_theme.screen-xlg-min
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_large
+    breakpoint_id: drupal8_w3css_theme.screen-xlg-min
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_large
+    breakpoint_id: drupal8_w3css_theme.screen-xlg-min
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_large
+    breakpoint_id: drupal8_w3css_theme.screen-xlg-min
+    multiplier: 3x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_medium
+    breakpoint_id: drupal8_w3css_theme.screen-lg-min
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_medium
+    breakpoint_id: drupal8_w3css_theme.screen-lg-min
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_medium
+    breakpoint_id: drupal8_w3css_theme.screen-lg-min
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_medium
+    breakpoint_id: drupal8_w3css_theme.screen-lg-min
+    multiplier: 3x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_medium
+    breakpoint_id: drupal8_w3css_theme.screen-md-min
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_medium
+    breakpoint_id: drupal8_w3css_theme.screen-md-min
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_medium
+    breakpoint_id: drupal8_w3css_theme.screen-md-min
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_medium
+    breakpoint_id: drupal8_w3css_theme.screen-md-min
+    multiplier: 3x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_small
+    breakpoint_id: drupal8_w3css_theme.screen-sm-min
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_small
+    breakpoint_id: drupal8_w3css_theme.screen-sm-min
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_small
+    breakpoint_id: drupal8_w3css_theme.screen-sm-min
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: cover_publication_small
+    breakpoint_id: drupal8_w3css_theme.screen-sm-min
+    multiplier: 3x
+breakpoint_group: drupal8_w3css_theme
+fallback_image_style: cover_publication_large

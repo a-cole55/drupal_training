@@ -1,0 +1,36 @@
+uuid: 010189f0-4003-4149-9e7b-b4d8776d20d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.countries.field_flag
+    - image.style.medium
+    - taxonomy.vocabulary.countries
+  module:
+    - image
+    - text
+id: taxonomy_term.countries.default
+targetEntityType: taxonomy_term
+bundle: countries
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_flag:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

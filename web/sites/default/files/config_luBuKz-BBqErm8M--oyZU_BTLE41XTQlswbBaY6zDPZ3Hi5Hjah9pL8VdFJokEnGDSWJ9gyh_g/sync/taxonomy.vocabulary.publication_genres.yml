@@ -1,0 +1,8 @@
+uuid: 78d60a55-01a3-48de-b637-962dc08facea
+langcode: en
+status: true
+dependencies: {  }
+name: 'Publication Genres'
+vid: publication_genres
+description: ''
+weight: 0

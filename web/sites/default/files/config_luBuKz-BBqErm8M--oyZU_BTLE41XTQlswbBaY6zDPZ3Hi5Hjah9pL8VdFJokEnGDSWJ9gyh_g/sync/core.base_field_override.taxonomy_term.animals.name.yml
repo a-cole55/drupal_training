@@ -1,0 +1,18 @@
+uuid: 633d21de-5917-4fd3-b229-392fe378ac6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.animals
+id: taxonomy_term.animals.name
+field_name: name
+entity_type: taxonomy_term
+bundle: animals
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

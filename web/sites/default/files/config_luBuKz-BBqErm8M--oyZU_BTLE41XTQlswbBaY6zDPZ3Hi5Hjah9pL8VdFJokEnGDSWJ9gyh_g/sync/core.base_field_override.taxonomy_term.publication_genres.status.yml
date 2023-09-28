@@ -1,0 +1,22 @@
+uuid: f48ad1ba-893a-4613-9c09-f440ee0d9c46
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.publication_genres
+id: taxonomy_term.publication_genres.status
+field_name: status
+entity_type: taxonomy_term
+bundle: publication_genres
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
