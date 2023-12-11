@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.content_as_field
     - field.field.node.publication.body
+    - field.field.node.publication.field_photo
     - field.field.node.publication.field_publication_author
     - field.field.node.publication.field_publication_cover
     - field.field.node.publication.field_publication_date
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.publication.field_publication_language
     - field.field.node.publication.field_publication_pages
     - field.field.node.publication.field_publication_publisher
+    - field.field.node.publication.field_publication_sales
     - field.field.node.publication.field_publication_sample_chapter
     - node.type.publication
   module:
@@ -25,6 +27,7 @@ mode: content_as_field
 content: {  }
 hidden:
   body: true
+  field_photo: true
   field_publication_author: true
   field_publication_cover: true
   field_publication_date: true
@@ -34,6 +37,7 @@ hidden:
   field_publication_language: true
   field_publication_pages: true
   field_publication_publisher: true
+  field_publication_sales: true
   field_publication_sample_chapter: true
   langcode: true
   links: true

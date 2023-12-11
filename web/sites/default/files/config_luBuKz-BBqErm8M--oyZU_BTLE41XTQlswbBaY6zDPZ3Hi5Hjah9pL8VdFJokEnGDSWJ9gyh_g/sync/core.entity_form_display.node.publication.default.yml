@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.publication.body
+    - field.field.node.publication.field_photo
     - field.field.node.publication.field_publication_author
     - field.field.node.publication.field_publication_cover
     - field.field.node.publication.field_publication_date
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.publication.field_publication_language
     - field.field.node.publication.field_publication_pages
     - field.field.node.publication.field_publication_publisher
+    - field.field.node.publication.field_publication_sales
     - field.field.node.publication.field_publication_sample_chapter
     - image.style.thumbnail
     - node.type.publication
@@ -94,6 +96,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_photo:
+    type: image_image
+    weight: 26
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
   field_publication_author:
     type: entity_reference_autocomplete
     weight: 18
@@ -156,6 +166,13 @@ content:
     weight: 12
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_publication_sales:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_publication_sample_chapter:
     type: file_generic

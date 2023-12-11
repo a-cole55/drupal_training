@@ -6,12 +6,19 @@ dependencies:
     - field.storage.node.field_publication_cover
     - node.type.publication
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.publication.field_publication_cover
 field_name: field_publication_cover
 entity_type: node
 bundle: publication
-label: Cubrir
+label: Cover
 description: ''
 required: true
 translatable: true

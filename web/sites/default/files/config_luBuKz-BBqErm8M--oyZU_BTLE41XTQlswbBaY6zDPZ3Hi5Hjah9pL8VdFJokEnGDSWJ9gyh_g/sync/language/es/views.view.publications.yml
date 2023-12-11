@@ -1,0 +1,48 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<p>From this page you can consult all the publications of our bookstore.</p>'
+            format: basic_html
+      title: Publicaciones
+      fields:
+        field_publication_cover:
+          label: Cubrir
+        title:
+          label: Título
+        field_publication_author:
+          label: Autor
+        field_publication_date_1:
+          label: 'Ano de Publicacion'
+        field_publication_date:
+          label: 'Fecha de publicación'
+        field_publication_genre:
+          label: Género
+        field_publication_publisher:
+          label: Editor
+        nothing:
+          admin_label: 'Editorial y fecha de publicación'
+          label: 'Publicado por'
+      filters:
+        field_publication_genre_target_id:
+          expose:
+            label: Género
+        title:
+          expose:
+            label: Título
+    display_title: 'Por Defecto'
+  block_1:
+    display_title: Bloquear
+    display_options:
+      title: 'Últimas publicaciones'
+      use_more_text: 'Más publicaciones...'
+      block_description: 'Últimas publicaciones'
+  page_1:
+    display_title: Página
+    display_options:
+      menu:
+        title: Publicaciones
+        description: Publicaciones
+label: Publicaciones

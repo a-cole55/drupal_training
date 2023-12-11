@@ -1,0 +1,15 @@
+uuid: c1b126dd-90c8-4b43-bc06-bffe60d46401
+langcode: en
+status: true
+dependencies: {  }
+name: cover_publication_list
+label: 'Cover publication list'
+effects:
+  a1e4e5d5-e945-4d24-9201-d6a41b5953fe:
+    uuid: a1e4e5d5-e945-4d24-9201-d6a41b5953fe
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 150
+      anchor: center-center

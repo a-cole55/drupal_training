@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.publication.body
+    - field.field.node.publication.field_photo
     - field.field.node.publication.field_publication_author
     - field.field.node.publication.field_publication_cover
     - field.field.node.publication.field_publication_date
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.publication.field_publication_language
     - field.field.node.publication.field_publication_pages
     - field.field.node.publication.field_publication_publisher
+    - field.field.node.publication.field_publication_sales
     - field.field.node.publication.field_publication_sample_chapter
     - image.style.cover_publication_teaser
     - node.type.publication
@@ -59,6 +61,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_photo: true
   field_publication_date: true
   field_publication_format: true
   field_publication_genre: true
@@ -66,5 +69,6 @@ hidden:
   field_publication_language: true
   field_publication_pages: true
   field_publication_publisher: true
+  field_publication_sales: true
   field_publication_sample_chapter: true
   langcode: true

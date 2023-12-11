@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.publication.body
+    - field.field.node.publication.field_photo
     - field.field.node.publication.field_publication_author
     - field.field.node.publication.field_publication_cover
     - field.field.node.publication.field_publication_date
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.publication.field_publication_language
     - field.field.node.publication.field_publication_pages
     - field.field.node.publication.field_publication_publisher
+    - field.field.node.publication.field_publication_sales
     - field.field.node.publication.field_publication_sample_chapter
     - node.type.publication
   module:
@@ -33,6 +35,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 112
     region: content
   field_publication_author:
     type: entity_reference_label
@@ -109,6 +122,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 106
+    region: content
+  field_publication_sales:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 113
     region: content
   field_publication_sample_chapter:
     type: file_default

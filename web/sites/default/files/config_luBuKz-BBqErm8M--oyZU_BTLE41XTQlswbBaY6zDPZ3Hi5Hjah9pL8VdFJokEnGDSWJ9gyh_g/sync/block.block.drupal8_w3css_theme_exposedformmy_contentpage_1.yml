@@ -1,0 +1,23 @@
+uuid: b0a54d40-6f00-46fd-890a-c87e95747e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.my_content
+  module:
+    - views
+  theme:
+    - drupal8_w3css_theme
+id: drupal8_w3css_theme_exposedformmy_contentpage_1
+theme: drupal8_w3css_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:my_content-page_1'
+settings:
+  id: 'views_exposed_filter_block:my_content-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'My content'
+visibility: {  }
