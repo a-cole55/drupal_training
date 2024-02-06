@@ -1,0 +1,15 @@
+uuid: 7877effc-3b5f-4f40-b930-18d1eeaf5879
+langcode: en
+status: true
+dependencies: {  }
+name: cover_publication_medium
+label: 'Cover publication medium'
+effects:
+  284762e5-6738-4bd7-8cb6-d58c0fd141b1:
+    uuid: 284762e5-6738-4bd7-8cb6-d58c0fd141b1
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false

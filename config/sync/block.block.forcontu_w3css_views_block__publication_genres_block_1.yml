@@ -1,0 +1,24 @@
+uuid: cefaca4b-9782-43fc-a683-f3f71608250c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publication_genres
+  module:
+    - views
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_views_block__publication_genres_block_1
+theme: forcontu_w3css
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:publication_genres-block_1'
+settings:
+  id: 'views_block:publication_genres-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

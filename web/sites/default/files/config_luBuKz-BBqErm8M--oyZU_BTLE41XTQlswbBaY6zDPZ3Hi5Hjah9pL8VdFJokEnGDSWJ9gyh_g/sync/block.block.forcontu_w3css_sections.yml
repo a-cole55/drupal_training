@@ -1,0 +1,25 @@
+uuid: 32ee62a1-0587-4281-b223-912ad74808e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sections
+  module:
+    - system
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_sections
+theme: forcontu_w3css
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:sections'
+settings:
+  id: 'system_menu_block:sections'
+  label: Sections
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

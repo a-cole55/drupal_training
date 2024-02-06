@@ -1,0 +1,38 @@
+uuid: b6e2d773-498c-401e-a839-d298ae96a75a
+langcode: en
+status: true
+dependencies:
+  module:
+    - hierarchical_taxonomy_menu
+  theme:
+    - bartik
+id: bartik_hierarchicaltaxonomymenu
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: hierarchical_taxonomy_menu
+settings:
+  id: hierarchical_taxonomy_menu
+  label: Animals
+  label_display: visible
+  provider: hierarchical_taxonomy_menu
+  vocabulary: animals|field_icon
+  max_depth: 100
+  dynamic_block_title: false
+  collapsible: false
+  stay_open: false
+  interactive_parent: false
+  hide_block: false
+  use_image_style: false
+  image_height: 16
+  image_width: 16
+  image_style: large
+  max_age: '0'
+  base_term: ''
+  dynamic_base_term: false
+  show_count: 0
+  referencing_field: _none
+  calculate_count_recursively: false
+  exclude_empty_terms: false
+visibility: {  }

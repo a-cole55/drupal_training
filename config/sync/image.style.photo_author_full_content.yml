@@ -1,0 +1,15 @@
+uuid: 1f7e4273-632c-46ff-8d6f-e21eafd34323
+langcode: en
+status: true
+dependencies: {  }
+name: photo_author_full_content
+label: 'Photo author full content'
+effects:
+  45121d9c-ddb0-4ff5-a6f6-7f81f1bdcaf1:
+    uuid: 45121d9c-ddb0-4ff5-a6f6-7f81f1bdcaf1
+    id: image_scale
+    weight: 1
+    data:
+      width: 250
+      height: null
+      upscale: false

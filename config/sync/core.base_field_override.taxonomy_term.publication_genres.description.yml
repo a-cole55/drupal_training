@@ -1,0 +1,21 @@
+uuid: 0a41c02d-82e3-437a-9489-0e8409232018
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.publication_genres
+  module:
+    - text
+id: taxonomy_term.publication_genres.description
+field_name: description
+entity_type: taxonomy_term
+bundle: publication_genres
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

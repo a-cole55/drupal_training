@@ -1,0 +1,23 @@
+uuid: 2ae3a4b3-8851-4453-8d13-332f6035b38a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.my_content
+  module:
+    - views
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_exposedformmy_contentpage_1
+theme: forcontu_bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:my_content-page_1'
+settings:
+  id: 'views_exposed_filter_block:my_content-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'My content'
+visibility: {  }

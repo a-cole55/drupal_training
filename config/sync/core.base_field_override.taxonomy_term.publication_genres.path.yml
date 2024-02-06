@@ -1,0 +1,20 @@
+uuid: 1bd7fa2b-9887-42a3-90c0-7b3816b5bc90
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.publication_genres
+  module:
+    - path
+id: taxonomy_term.publication_genres.path
+field_name: path
+entity_type: taxonomy_term
+bundle: publication_genres
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,25 @@
+uuid: 0996c9aa-8431-4d96-abf8-28a7c086eba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sections
+  module:
+    - system
+  theme:
+    - bartik
+id: bartik_sections
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:sections'
+settings:
+  id: 'system_menu_block:sections'
+  label: Sections
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

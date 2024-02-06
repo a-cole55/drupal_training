@@ -1,0 +1,29 @@
+uuid: b55f52f1-0ea2-49e4-b3d4-8ddbf5d99bc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author_country
+    - node.type.author
+    - taxonomy.vocabulary.countries
+id: node.author.field_author_country
+field_name: field_author_country
+entity_type: node
+bundle: author
+label: 'Country of birth'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      countries: countries
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

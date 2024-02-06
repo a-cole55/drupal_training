@@ -1,0 +1,17 @@
+uuid: 2045d06d-afb7-4ff7-8945-2a3e0bb26e57
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.comments
+  module:
+    - ckeditor5
+format: comments
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - link
+  plugins: {  }
+image_upload: {  }

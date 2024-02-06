@@ -1,0 +1,14 @@
+uuid: 089c7d24-b4de-4ab4-a40b-4eaf47770414
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Contact Us'
+recipients:
+  - arniqua_c@yahoo.com
+reply: 'Thank you for reaching out. Someone will contact you soon.'
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

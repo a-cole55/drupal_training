@@ -1,0 +1,24 @@
+uuid: c8ea1cb7-2f98-4c55-8c29-0be9bdc7f824
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publication_genres
+  module:
+    - views
+  theme:
+    - bartik
+id: bartik_views_block__publication_genres_block_1
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:publication_genres-block_1'
+settings:
+  id: 'views_block:publication_genres-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

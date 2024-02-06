@@ -1,0 +1,51 @@
+uuid: e5f88b25-1639-4e95-8a47-6138fec89a3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_as_field
+    - field.field.node.author.body
+    - field.field.node.author.field_author_birth_date
+    - field.field.node.author.field_author_country
+    - field.field.node.author.field_author_highlighted
+    - field.field.node.author.field_author_photo
+    - image.style.photo_author_teaser
+    - node.type.author
+  module:
+    - image
+    - text
+    - user
+id: node.author.content_as_field
+targetEntityType: node
+bundle: author
+mode: content_as_field
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_author_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: photo_author_teaser
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_author_birth_date: true
+  field_author_country: true
+  field_author_highlighted: true
+  langcode: true

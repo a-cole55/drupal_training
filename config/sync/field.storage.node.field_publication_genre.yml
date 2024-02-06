@@ -1,0 +1,20 @@
+uuid: 8841730a-3500-4073-aba6-502cff5ce38c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_publication_genre
+field_name: field_publication_genre
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

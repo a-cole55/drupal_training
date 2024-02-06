@@ -1,0 +1,25 @@
+uuid: 5544bd89-be5f-4107-a87e-17114836931b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_block:45895c63-5878-4ac1-98a1-ce6e602e3393'
+  module:
+    - block_content
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_blockwithimage
+theme: forcontu_w3css
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'block_content:45895c63-5878-4ac1-98a1-ce6e602e3393'
+settings:
+  id: 'block_content:45895c63-5878-4ac1-98a1-ce6e602e3393'
+  label: 'Block with image'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

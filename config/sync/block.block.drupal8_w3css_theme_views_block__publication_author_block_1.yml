@@ -1,0 +1,25 @@
+uuid: 4c52ac3f-bc05-4249-aab7-5f242d99324a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publication_author
+  module:
+    - views
+  theme:
+    - drupal8_w3css_theme
+id: drupal8_w3css_theme_views_block__publication_author_block_1
+theme: drupal8_w3css_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:publication_author-block_1'
+settings:
+  id: 'views_block:publication_author-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }

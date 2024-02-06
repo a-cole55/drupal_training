@@ -1,0 +1,76 @@
+uuid: 6099c305-f92f-4f8c-b34a-08d50332e70c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publication.body
+    - field.field.node.publication.field_photo
+    - field.field.node.publication.field_publication_author
+    - field.field.node.publication.field_publication_cover
+    - field.field.node.publication.field_publication_date
+    - field.field.node.publication.field_publication_format
+    - field.field.node.publication.field_publication_genre
+    - field.field.node.publication.field_publication_isbn
+    - field.field.node.publication.field_publication_language
+    - field.field.node.publication.field_publication_pages
+    - field.field.node.publication.field_publication_publisher
+    - field.field.node.publication.field_publication_sales
+    - field.field.node.publication.field_publication_sample_chapter
+    - field.field.node.publication.field_related_news
+    - image.style.cover_publication_teaser
+    - node.type.publication
+  module:
+    - image
+    - text
+    - user
+id: node.publication.teaser
+targetEntityType: node
+bundle: publication
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_publication_author:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_publication_cover:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: cover_publication_teaser
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_photo: true
+  field_publication_date: true
+  field_publication_format: true
+  field_publication_genre: true
+  field_publication_isbn: true
+  field_publication_language: true
+  field_publication_pages: true
+  field_publication_publisher: true
+  field_publication_sales: true
+  field_publication_sample_chapter: true
+  field_related_news: true
+  langcode: true

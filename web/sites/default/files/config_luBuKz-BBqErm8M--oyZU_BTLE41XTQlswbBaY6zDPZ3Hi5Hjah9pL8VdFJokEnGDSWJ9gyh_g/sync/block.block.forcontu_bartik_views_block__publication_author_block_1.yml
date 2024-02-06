@@ -1,0 +1,25 @@
+uuid: d665660a-5b4b-4cc3-bdb8-c867b6ae4f19
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publication_author
+  module:
+    - views
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_views_block__publication_author_block_1
+theme: forcontu_bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:publication_author-block_1'
+settings:
+  id: 'views_block:publication_author-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }

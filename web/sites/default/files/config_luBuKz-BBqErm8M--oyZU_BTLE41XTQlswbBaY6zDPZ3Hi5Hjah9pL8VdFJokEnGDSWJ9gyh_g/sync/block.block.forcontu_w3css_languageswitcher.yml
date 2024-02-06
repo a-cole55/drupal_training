@@ -1,0 +1,20 @@
+uuid: 00e3ef1e-7b8b-4b5c-925c-8e7648c1e535
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_languageswitcher
+theme: forcontu_w3css
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: visible
+  provider: language
+visibility: {  }

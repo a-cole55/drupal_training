@@ -1,0 +1,22 @@
+uuid: 256c2348-2fd0-4a4c-a183-f843631fe7e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forcontu_bartik
+_core:
+  default_config_hash: 77s443SbxpaD9wY75o720nAWsS4ejvWvH927ouPRinU
+id: forcontu_bartik_powered
+theme: forcontu_bartik
+region: sidebar_first
+weight: -2
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

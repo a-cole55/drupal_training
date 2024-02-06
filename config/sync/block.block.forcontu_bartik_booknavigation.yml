@@ -1,0 +1,21 @@
+uuid: bd19710c-56a4-4209-b238-5ad6f6b6b6d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_booknavigation
+theme: forcontu_bartik
+region: sidebar_first
+weight: -4
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Book navigation'
+  label_display: visible
+  provider: book
+  block_mode: 'book pages'
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 692ba04b-abd7-437b-8dfc-6cb2b36153dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.news_comments
+    - field.storage.comment.field_news_like
+id: comment.news_comments.field_news_like
+field_name: field_news_like
+entity_type: comment
+bundle: news_comments
+label: 'I like it'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

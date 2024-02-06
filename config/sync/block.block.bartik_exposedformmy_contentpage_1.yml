@@ -1,0 +1,23 @@
+uuid: 8e4db31e-40fc-40d7-8d78-bce37da26752
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.my_content
+  module:
+    - views
+  theme:
+    - bartik
+id: bartik_exposedformmy_contentpage_1
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:my_content-page_1'
+settings:
+  id: 'views_exposed_filter_block:my_content-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'My content'
+visibility: {  }

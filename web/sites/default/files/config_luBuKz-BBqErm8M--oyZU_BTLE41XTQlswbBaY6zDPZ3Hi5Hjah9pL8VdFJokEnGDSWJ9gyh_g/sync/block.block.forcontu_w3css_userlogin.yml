@@ -1,0 +1,20 @@
+uuid: 214a84a8-440f-491e-ba6a-3ce738bd4d74
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_userlogin
+theme: forcontu_w3css
+region: sidebar_first
+weight: -7
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: visible
+  provider: user
+visibility: {  }

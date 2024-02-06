@@ -1,0 +1,29 @@
+uuid: 5b5afe84-0b38-4712-ba53-522f2f161adb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publications
+  module:
+    - system
+    - views
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_views_block__publications_block_1
+theme: forcontu_w3css
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:publications-block_1'
+settings:
+  id: 'views_block:publications-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /bookstore/publications

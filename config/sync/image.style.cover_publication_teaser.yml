@@ -1,0 +1,15 @@
+uuid: 42b07a34-8201-445a-ad00-335ed6da969c
+langcode: en
+status: true
+dependencies: {  }
+name: cover_publication_teaser
+label: 'Cover publication teaser'
+effects:
+  0fa9b587-dc05-4552-8256-4f6676113bee:
+    uuid: 0fa9b587-dc05-4552-8256-4f6676113bee
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: null
+      upscale: false

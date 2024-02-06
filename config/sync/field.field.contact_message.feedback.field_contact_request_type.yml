@@ -1,0 +1,21 @@
+uuid: 8718ad50-538b-4c3d-bffa-8ed1b96a5fd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_contact_request_type
+  module:
+    - options
+id: contact_message.feedback.field_contact_request_type
+field_name: field_contact_request_type
+entity_type: contact_message
+bundle: feedback
+label: 'Request type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

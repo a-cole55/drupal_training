@@ -1,0 +1,8 @@
+uuid: 995bc362-2539-4654-aa44-4846f10aba30
+langcode: en
+status: true
+dependencies: {  }
+id: date_no_time
+label: 'Date no time'
+locked: false
+pattern: d/m/Y

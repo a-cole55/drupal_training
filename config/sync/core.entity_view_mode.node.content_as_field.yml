@@ -1,0 +1,10 @@
+uuid: 5da38f03-0c0a-4e6c-a990-721bebb43f68
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.content_as_field
+label: 'Content as field'
+targetEntityType: node
+cache: true

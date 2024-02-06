@@ -1,0 +1,46 @@
+uuid: 4ab71c85-f372-459d-90ab-5797e1a02aa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - block_content
+    - comment
+    - contact
+    - field_ui
+    - node
+    - path
+    - search
+    - shortcut
+    - system
+    - toolbar
+id: manager
+label: Manager
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access content overview'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'administer comments'
+  - 'administer contact forms'
+  - 'administer node display'
+  - 'administer nodes'
+  - 'administer search'
+  - 'create article content'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any article content'
+  - 'delete article revisions'
+  - 'delete own article content'
+  - 'edit any article content'
+  - 'edit own article content'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view the administration theme'

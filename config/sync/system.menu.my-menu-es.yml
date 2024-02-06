@@ -1,0 +1,8 @@
+uuid: 5fb8da9f-0738-4979-804c-30a22df29f69
+langcode: es
+status: true
+dependencies: {  }
+id: my-menu-es
+label: 'My menu es'
+description: ''
+locked: false

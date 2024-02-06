@@ -1,0 +1,25 @@
+uuid: 29f5000a-3c9f-40a7-994d-a1583df65483
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_block:45895c63-5878-4ac1-98a1-ce6e602e3393'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: bartik_blockwithimage
+theme: bartik
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'block_content:45895c63-5878-4ac1-98a1-ce6e602e3393'
+settings:
+  id: 'block_content:45895c63-5878-4ac1-98a1-ce6e602e3393'
+  label: 'Block with image'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

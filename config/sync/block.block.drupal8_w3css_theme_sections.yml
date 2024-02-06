@@ -1,0 +1,25 @@
+uuid: b928346e-5640-46bb-be3c-19410d1938ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sections
+  module:
+    - system
+  theme:
+    - drupal8_w3css_theme
+id: drupal8_w3css_theme_sections
+theme: drupal8_w3css_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:sections'
+settings:
+  id: 'system_menu_block:sections'
+  label: Sections
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

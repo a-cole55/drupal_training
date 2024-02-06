@@ -1,0 +1,39 @@
+uuid: 6ece0d18-4a2c-4b23-bd3e-547904311d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.comments
+    - filter.format.restricted_html
+    - node.type.forum
+  module:
+    - comment
+    - contact
+    - file
+    - filter
+    - media
+    - node
+    - search
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'create forum content'
+  - 'delete own files'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use advanced search'
+  - 'use text format basic_html'
+  - 'use text format comments'
+  - 'use text format restricted_html'
+  - 'view media'

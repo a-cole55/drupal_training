@@ -1,0 +1,21 @@
+uuid: 582d2822-4911-4788-8289-d161e334ad83
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.storage.contact_message.field_contact_birth_date
+  module:
+    - datetime
+id: contact_message.personal.field_contact_birth_date
+field_name: field_contact_birth_date
+entity_type: contact_message
+bundle: personal
+label: 'Birth date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

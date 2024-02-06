@@ -1,0 +1,22 @@
+uuid: a4cc7ab8-cdca-4867-8c24-c1d7260bfa9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.animals
+id: taxonomy_term.animals.status
+field_name: status
+entity_type: taxonomy_term
+bundle: animals
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

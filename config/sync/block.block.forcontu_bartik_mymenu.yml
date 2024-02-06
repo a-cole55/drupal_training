@@ -1,0 +1,25 @@
+uuid: c9f9dd84-e4a2-4197-8867-5c01e31cb1d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.my-menu
+  module:
+    - system
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_mymenu
+theme: forcontu_bartik
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:my-menu'
+settings:
+  id: 'system_menu_block:my-menu'
+  label: 'My menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

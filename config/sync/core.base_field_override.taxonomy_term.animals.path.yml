@@ -1,0 +1,20 @@
+uuid: 3bfd0fbb-b89e-4674-b250-f97fadd5506c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.animals
+  module:
+    - path
+id: taxonomy_term.animals.path
+field_name: path
+entity_type: taxonomy_term
+bundle: animals
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,25 @@
+uuid: 45a30a11-2b23-4963-a28e-3e23f6fbf5fd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_block:45895c63-5878-4ac1-98a1-ce6e602e3393'
+  module:
+    - block_content
+  theme:
+    - drupal8_w3css_theme
+id: drupal8_w3css_theme_blockwithimage
+theme: drupal8_w3css_theme
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'block_content:45895c63-5878-4ac1-98a1-ce6e602e3393'
+settings:
+  id: 'block_content:45895c63-5878-4ac1-98a1-ce6e602e3393'
+  label: 'Block with image'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

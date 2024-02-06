@@ -1,0 +1,21 @@
+uuid: 07712b64-457c-4d37-b21d-d221151aee5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_contact_request_type
+  module:
+    - options
+    - user
+id: user.user.field_contact_request_type
+field_name: field_contact_request_type
+entity_type: user
+bundle: user
+label: 'Request type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

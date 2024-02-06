@@ -1,0 +1,8 @@
+uuid: 1cf778ff-2345-4579-92b3-c688bc978598
+langcode: en
+status: true
+dependencies: {  }
+name: Animals
+vid: animals
+description: ''
+weight: 0

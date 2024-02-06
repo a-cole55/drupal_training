@@ -1,0 +1,45 @@
+uuid: 13effe80-4d30-4859-99e0-98ee0c4aa7b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.content_as_field
+    - field.field.node.publication.body
+    - field.field.node.publication.field_photo
+    - field.field.node.publication.field_publication_author
+    - field.field.node.publication.field_publication_cover
+    - field.field.node.publication.field_publication_date
+    - field.field.node.publication.field_publication_format
+    - field.field.node.publication.field_publication_genre
+    - field.field.node.publication.field_publication_isbn
+    - field.field.node.publication.field_publication_language
+    - field.field.node.publication.field_publication_pages
+    - field.field.node.publication.field_publication_publisher
+    - field.field.node.publication.field_publication_sales
+    - field.field.node.publication.field_publication_sample_chapter
+    - field.field.node.publication.field_related_news
+    - node.type.publication
+  module:
+    - user
+id: node.publication.content_as_field
+targetEntityType: node
+bundle: publication
+mode: content_as_field
+content: {  }
+hidden:
+  body: true
+  field_photo: true
+  field_publication_author: true
+  field_publication_cover: true
+  field_publication_date: true
+  field_publication_format: true
+  field_publication_genre: true
+  field_publication_isbn: true
+  field_publication_language: true
+  field_publication_pages: true
+  field_publication_publisher: true
+  field_publication_sales: true
+  field_publication_sample_chapter: true
+  field_related_news: true
+  langcode: true
+  links: true

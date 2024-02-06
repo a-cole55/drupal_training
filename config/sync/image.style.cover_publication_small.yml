@@ -1,0 +1,15 @@
+uuid: 50cf93aa-02f6-433e-ac53-cb278da7eff1
+langcode: en
+status: true
+dependencies: {  }
+name: cover_publication_small
+label: 'Cover publication small'
+effects:
+  d1d39d79-a3a3-4735-b257-ef77f815ea3e:
+    uuid: d1d39d79-a3a3-4735-b257-ef77f815ea3e
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: null
+      upscale: false

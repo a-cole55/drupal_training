@@ -1,0 +1,23 @@
+uuid: 52d14942-9e5f-4010-9248-3a923c276c51
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.my_content
+  module:
+    - views
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_exposedformmy_contentpage_1
+theme: forcontu_w3css
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:my_content-page_1'
+settings:
+  id: 'views_exposed_filter_block:my_content-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: 'My content'
+visibility: {  }

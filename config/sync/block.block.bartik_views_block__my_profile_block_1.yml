@@ -1,0 +1,25 @@
+uuid: 4c11e475-81c7-49d9-b728-a072bb8c7ce5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.my_profile
+  module:
+    - views
+  theme:
+    - bartik
+id: bartik_views_block__my_profile_block_1
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:my_profile-block_1'
+settings:
+  id: 'views_block:my_profile-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }

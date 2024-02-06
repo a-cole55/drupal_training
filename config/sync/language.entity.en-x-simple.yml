@@ -1,0 +1,9 @@
+uuid: c1ad3c19-e3c1-48c8-b2ec-e3065d258d0a
+langcode: en
+status: true
+dependencies: {  }
+id: en-x-simple
+label: 'Simple English'
+direction: ltr
+weight: 2
+locked: false

@@ -1,0 +1,23 @@
+uuid: d9ac9174-b358-41f3-9ff1-817cf04ab838
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - forcontu_w3css
+_core:
+  default_config_hash: BsbW26bDVnavqpfRuOp3gecOtsVAsF3_ATPD5E856-4
+id: forcontu_w3css_search
+theme: forcontu_w3css
+region: sidebar_first
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

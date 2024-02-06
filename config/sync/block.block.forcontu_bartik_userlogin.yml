@@ -1,0 +1,20 @@
+uuid: acf5b862-95d8-428c-be97-e127913f316d
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_userlogin
+theme: forcontu_bartik
+region: sidebar_first
+weight: -11
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: visible
+  provider: user
+visibility: {  }

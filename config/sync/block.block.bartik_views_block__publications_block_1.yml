@@ -1,0 +1,29 @@
+uuid: 7292a15e-bdc2-4b77-8de5-fdee8bd57a0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publications
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: bartik_views_block__publications_block_1
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:publications-block_1'
+settings:
+  id: 'views_block:publications-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /bookstore/publications

@@ -1,0 +1,22 @@
+uuid: 21a8fd31-6bfe-4ed8-b081-08a2f4ddaacd
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - forcontu_w3css
+_core:
+  default_config_hash: o18PjysFmKtSO5Wi2d0V9Kw-EqwdE69bLenXZEwvK5E
+id: forcontu_w3css_help
+theme: forcontu_w3css
+region: highlighted
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

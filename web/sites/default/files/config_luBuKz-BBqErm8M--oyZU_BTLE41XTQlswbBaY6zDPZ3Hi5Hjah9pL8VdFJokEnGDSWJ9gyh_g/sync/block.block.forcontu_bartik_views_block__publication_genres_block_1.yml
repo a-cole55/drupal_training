@@ -1,0 +1,24 @@
+uuid: 608651ec-d431-4cc3-8605-ead6e93aad9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.publication_genres
+  module:
+    - views
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_views_block__publication_genres_block_1
+theme: forcontu_bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:publication_genres-block_1'
+settings:
+  id: 'views_block:publication_genres-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

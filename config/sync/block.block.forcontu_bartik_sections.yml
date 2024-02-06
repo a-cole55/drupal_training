@@ -1,0 +1,25 @@
+uuid: 5eb019e9-c31e-4c17-8615-ecf119b40dad
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sections
+  module:
+    - system
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_sections
+theme: forcontu_bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:sections'
+settings:
+  id: 'system_menu_block:sections'
+  label: Sections
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: cedbaffa-e379-4d4b-a873-2a2c2fc5cee6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_publisher
+    - node.type.publication
+    - taxonomy.vocabulary.publishers
+id: node.publication.field_publication_publisher
+field_name: field_publication_publisher
+entity_type: node
+bundle: publication
+label: Publisher
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      publishers: publishers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

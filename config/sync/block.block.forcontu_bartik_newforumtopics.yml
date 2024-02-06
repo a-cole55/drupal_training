@@ -1,0 +1,31 @@
+uuid: f0bc43bf-f92d-438c-a727-22f9c5b2f398
+langcode: en
+status: true
+dependencies:
+  module:
+    - forum
+    - language
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_newforumtopics
+theme: forcontu_bartik
+region: sidebar_first
+weight: -9
+provider: null
+plugin: forum_new_block
+settings:
+  id: forum_new_block
+  label: 'New forum topics'
+  label_display: visible
+  provider: forum
+  properties:
+    administrative: '1'
+  block_count: 5
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en

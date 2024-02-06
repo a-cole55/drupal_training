@@ -1,0 +1,25 @@
+uuid: 533e6a84-12c7-4f9a-add6-458071e88bbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.my-menu
+  module:
+    - system
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_mymenu
+theme: forcontu_w3css
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:my-menu'
+settings:
+  id: 'system_menu_block:my-menu'
+  label: 'My menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

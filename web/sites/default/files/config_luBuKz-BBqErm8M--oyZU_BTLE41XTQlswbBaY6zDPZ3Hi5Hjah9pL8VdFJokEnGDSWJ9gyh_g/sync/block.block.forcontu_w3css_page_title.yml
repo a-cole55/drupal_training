@@ -1,0 +1,20 @@
+uuid: 13856d09-b06f-4e5b-ad2c-5c51dda996b9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forcontu_w3css
+_core:
+  default_config_hash: hf6f7MvHe1YVzxbzFnepvFwkEoL69iHPiD6XIv4hsMs
+id: forcontu_w3css_page_title
+theme: forcontu_w3css
+region: sidebar_first
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

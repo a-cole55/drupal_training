@@ -1,0 +1,25 @@
+uuid: a33fcec4-5c89-4689-a360-15776b44cc62
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.my_profile
+  module:
+    - views
+  theme:
+    - forcontu_w3css
+id: forcontu_w3css_views_block__my_profile_block_1
+theme: forcontu_w3css
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:my_profile-block_1'
+settings:
+  id: 'views_block:my_profile-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }

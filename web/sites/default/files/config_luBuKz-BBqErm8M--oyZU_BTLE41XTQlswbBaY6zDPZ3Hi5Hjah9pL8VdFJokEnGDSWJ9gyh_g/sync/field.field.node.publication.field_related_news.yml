@@ -1,0 +1,25 @@
+uuid: 3f4cd564-118f-47f6-8613-8a659e92d416
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_news
+    - node.type.publication
+id: node.publication.field_related_news
+field_name: field_related_news
+entity_type: node
+bundle: publication
+label: 'Related News'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: related_news
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

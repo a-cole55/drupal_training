@@ -1,0 +1,8 @@
+uuid: d3582c11-8eff-44d6-b662-4dd7a412669c
+langcode: en
+status: true
+dependencies: {  }
+id: sections
+label: Sections
+description: ''
+locked: false

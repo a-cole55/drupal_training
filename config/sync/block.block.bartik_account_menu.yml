@@ -1,0 +1,27 @@
+uuid: 50399362-8a16-484b-816c-ad360cd380cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - bartik
+_core:
+  default_config_hash: tSBzrrtzR5T5J4udKazBEykZ0ew9Xr0P4e6F8NPNNx8
+id: bartik_account_menu
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

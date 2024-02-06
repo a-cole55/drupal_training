@@ -1,0 +1,33 @@
+uuid: d20ba8f1-0c46-4f1a-beef-a9519ebb6197
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: publicacion
+label: 'Publication es'
+type: 'canonical_entities:node'
+pattern: '/libreria/publicacion/[node:field_publication_genre]/[node:title]'
+selection_criteria:
+  de3ee0d0-9497-4d0e-8bc6-22e1a0883dda:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: de3ee0d0-9497-4d0e-8bc6-22e1a0883dda
+    context_mapping:
+      node: node
+    bundles:
+      publication: publication
+  234b757b-e978-4c7c-ae38-d1320823cae9:
+    id: language
+    negate: false
+    uuid: 234b757b-e978-4c7c-ae38-d1320823cae9
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

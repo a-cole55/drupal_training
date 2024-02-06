@@ -1,0 +1,93 @@
+uuid: 80ec07a5-4923-4d43-a7ca-0d8f6163f656
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.news_comments.default
+    - field.field.node.news.body
+    - field.field.node.news.field_news_comments
+    - field.field.node.news.field_news_country
+    - field.field.node.news.field_news_lead
+    - field.field.node.news.field_news_photo
+    - field.field.node.news.field_news_section
+    - field.field.node.news.field_news_video
+    - node.type.news
+  module:
+    - comment
+    - image
+    - text
+    - user
+    - video_embed_field
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_news_comments:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_news_country:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_news_lead:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_news_photo:
+    type: image
+    label: inline
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_news_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_news_video:
+    type: video_embed_field_video
+    label: above
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

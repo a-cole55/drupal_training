@@ -1,0 +1,18 @@
+uuid: fdb0bd67-4119-45b5-89ba-3611de93ff1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.countries
+id: taxonomy_term.countries.name
+field_name: name
+entity_type: taxonomy_term
+bundle: countries
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

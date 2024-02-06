@@ -1,0 +1,8 @@
+uuid: 0640bf73-0eb7-4207-a467-54a49a038572
+langcode: en
+status: true
+dependencies: {  }
+id: news_comments
+label: 'News comments'
+target_entity_type_id: node
+description: 'Custom comments for news.'

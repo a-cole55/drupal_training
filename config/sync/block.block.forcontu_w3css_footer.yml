@@ -1,0 +1,27 @@
+uuid: 440a6da7-1fb7-45e5-9de7-9dc118165f97
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - forcontu_w3css
+_core:
+  default_config_hash: cOGu9KiV36jPd1ypk0yl3gVFgfhEzTx6mCmzLxSJ61I
+id: forcontu_w3css_footer
+theme: forcontu_w3css
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
