@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.publication.field_publication_publisher
     - field.field.node.publication.field_publication_sales
     - field.field.node.publication.field_publication_sample_chapter
+    - field.field.node.publication.field_related_news
     - node.type.publication
   module:
     - datetime
@@ -139,6 +140,14 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     weight: 109
+    region: content
+  field_related_news:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 114
     region: content
   links:
     settings: {  }

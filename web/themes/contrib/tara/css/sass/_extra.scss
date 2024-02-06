@@ -73,21 +73,17 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
   clear: both;
   width: 100%;
 }
-#highlighted::before,
 #last-section::before {
   content: "";
   display: table;
   clear: both;
 }
-#highlighted::after,
 #last-section::after {
   content: "";
   display: table;
   clear: both;
 }
-#main-wrapper::before,
 #homepage-content-wrapper::before,
-#main-wrapper::after,
 #homepage-content-wrapper::after {
   content: "";
   display: table;
@@ -106,9 +102,7 @@ div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-with
 .node-taxonomy-container::before,
 .node-taxonomy-container::after,
 .node-links-container::before,
-.node-links-container::after,
-nav.pager::before,
-nav.pager::after {
+.node-links-container::after {
   content: "";
   display: table;
   clear: both;

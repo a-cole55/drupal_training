@@ -1,4 +1,4 @@
-<section id="last-section" class="section"></section>
+<section id="last-section" class="last-section"></section>
 <!-- Start: Footer -->
 <footer id="footer">
   <div class="footer">
@@ -55,9 +55,17 @@
   </div> <!--/.footer -->
 </footer>
 {% if scrolltotop_on %}
-<div class="scrolltop"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+<div class="scrolltop"><i class="icon-arrow-up" aria-hidden="true"></i></div>
 {% endif %}
-<!-- End: Footer -->
+{% if fontawesome_four %}
+  {{ attach_library('tara/fontawesome4') }}
+{% endif %}
+{% if fontawesome_five %}
+  {{ attach_library('tara/fontawesome5') }}
+{% endif %}
+{% if fontawesome_six %}
+  {{ attach_library('tara/fontawesome6') }}
+{% endif %}
 {% if bootstrapicons %}
   {{ attach_library('tara/bootstrap-icons') }}
 {% endif %}

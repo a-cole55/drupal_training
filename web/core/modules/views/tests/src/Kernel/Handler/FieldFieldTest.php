@@ -18,7 +18,6 @@ use Drupal\views\Views;
  *
  * @see \Drupal\views\Plugin\views\field\EntityField
  * @group views
- * @group #slow
  */
 class FieldFieldTest extends ViewsKernelTestBase {
 

@@ -66,7 +66,6 @@ class DbLogTest extends BrowserTestBase {
     $this->adminUser = $this->drupalCreateUser([
       'administer site configuration',
       'access administration pages',
-      'access help pages',
       'access site reports',
       'administer users',
     ]);
@@ -140,36 +139,6 @@ class DbLogTest extends BrowserTestBase {
 
     // Verify severity.
     $this->assertSession()->pageTextContains('Notice');
-  }
-
-  /**
-   * Tests that the details page displays the backtrace for a logged \Throwable.
-   */
-  public function testOnError(): void {
-    // Log in as the admin user.
-    $this->drupalLogin($this->adminUser);
-
-    // Load a page that throws an exception in the controller, and includes its
-    // function arguments in the exception backtrace.
-    $this->drupalGet('error-test/trigger-exception');
-
-    // Load the details page for the most recent event logged by the "php"
-    // logger.
-    $query = Database::getConnection()->select('watchdog')
-      ->condition('type', 'php');
-    $query->addExpression('MAX([wid])');
-    $wid = $query->execute()->fetchField();
-    $this->drupalGet('admin/reports/dblog/event/' . $wid);
-
-    // Verify the page displays a dblog-event table with a "Type" header.
-    $table = $this->assertSession()->elementExists('xpath', "//table[@class='dblog-event']");
-    $type = "//tr/th[contains(text(), 'Type')]/../td";
-    $this->assertSession()->elementsCount('xpath', $type, 1, $table);
-
-    // Verify that the backtrace row exists and is HTML-encoded.
-    $backtrace = "//tr//pre[contains(@class, 'backtrace')]";
-    $this->assertCount(1, $table->findAll('xpath', $backtrace));
-    $this->assertSession()->responseContains('&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;');
   }
 
   /**
@@ -551,10 +520,7 @@ class DbLogTest extends BrowserTestBase {
 
     // Create a node using the form in order to generate an add content event
     // (which is not triggered by drupalCreateNode).
-    $edit = [
-      'title[0][value]' => $this->randomMachineName(8),
-      'body[0][value]'  => $this->randomMachineName(32),
-    ];
+    $edit = $this->getContent();
     $title = $edit['title[0][value]'];
     $this->drupalGet('node/add/' . $type);
     $this->submitForm($edit, 'Save');
@@ -563,9 +529,7 @@ class DbLogTest extends BrowserTestBase {
     $node = $this->drupalGetNodeByTitle($title);
     $this->assertNotNull($node, new FormattableMarkup('Node @title was loaded', ['@title' => $title]));
     // Edit the node.
-    $edit = [
-      'body[0][value]' => $this->randomMachineName(32),
-    ];
+    $edit = $this->getContentUpdate($type);
     $this->drupalGet('node/' . $node->id() . '/edit');
     $this->submitForm($edit, 'Save');
     $this->assertSession()->statusCodeEquals(200);
@@ -605,6 +569,36 @@ class DbLogTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     // Verify that the 'page not found' event was recorded.
     $this->assertSession()->pageTextContains('node/' . $node->id());
+  }
+
+  /**
+   * Creates random content based on node content type.
+   *
+   * @return array
+   *   Random content needed by various node types.
+   */
+  private function getContent() {
+    $content = [
+      'title[0][value]' => $this->randomMachineName(8),
+      'body[0][value]' => $this->randomMachineName(32),
+    ];
+    return $content;
+  }
+
+  /**
+   * Creates random content as an update based on node content type.
+   *
+   * @param string $type
+   *   Node content type (e.g., 'article').
+   *
+   * @return array
+   *   Random content needed by various node types.
+   */
+  private function getContentUpdate($type) {
+    $content = [
+      'body[0][value]' => $this->randomMachineName(32),
+    ];
+    return $content;
   }
 
   /**
@@ -826,14 +820,14 @@ class DbLogTest extends BrowserTestBase {
    */
   public function testTemporaryUser() {
     // Create a temporary user.
-    $temporary_user = $this->drupalCreateUser();
-    $temporary_user_uid = $temporary_user->id();
+    $tempuser = $this->drupalCreateUser();
+    $tempuser_uid = $tempuser->id();
 
     // Log in as the admin user.
     $this->drupalLogin($this->adminUser);
 
     // Generate a single watchdog entry.
-    $this->generateLogEntries(1, ['user' => $temporary_user, 'uid' => $temporary_user_uid]);
+    $this->generateLogEntries(1, ['user' => $tempuser, 'uid' => $tempuser_uid]);
     $query = Database::getConnection()->select('watchdog');
     $query->addExpression('MAX([wid])');
     $wid = $query->execute()->fetchField();
@@ -843,8 +837,8 @@ class DbLogTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Dblog test log message');
 
     // Delete the user.
-    $temporary_user->delete();
-    $this->drupalGet('user/' . $temporary_user_uid);
+    $tempuser->delete();
+    $this->drupalGet('user/' . $tempuser_uid);
     $this->assertSession()->statusCodeEquals(404);
 
     // Check if the full message displays on the details page.

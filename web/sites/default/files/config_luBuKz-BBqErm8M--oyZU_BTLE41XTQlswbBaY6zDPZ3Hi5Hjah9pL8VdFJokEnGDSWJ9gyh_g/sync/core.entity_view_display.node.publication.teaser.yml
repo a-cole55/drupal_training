@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.publication.field_publication_publisher
     - field.field.node.publication.field_publication_sales
     - field.field.node.publication.field_publication_sample_chapter
+    - field.field.node.publication.field_related_news
     - image.style.cover_publication_teaser
     - node.type.publication
   module:
@@ -71,4 +72,5 @@ hidden:
   field_publication_publisher: true
   field_publication_sales: true
   field_publication_sample_chapter: true
+  field_related_news: true
   langcode: true

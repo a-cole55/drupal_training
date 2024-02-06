@@ -6,9 +6,8 @@
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans Regular'), local('OpenSans-Regular'),
-       url('../fonts/open-sans.woff2') format('woff2'),
-       url('../fonts/open-sans.woff') format('woff')
-       url('../fonts/open-sans.ttf') format('truetype');
+       url('../fonts/open-sans.woff2') format('woff2');
+  font-display: swap;
 }
 /* roboto-regular - latin */
 @font-face {
@@ -16,7 +15,6 @@
   font-style: normal;
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/roboto.woff2') format('woff2'),
-       url('../fonts/roboto.woff') format('woff'),
-       url('../fonts/roboto.ttf') format('truetype');
+       url('../fonts/roboto.woff2') format('woff2');
+  font-display: swap;
 }

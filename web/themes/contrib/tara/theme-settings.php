@@ -7,11 +7,13 @@ use Drupal\Core\Form\FormStateInterface;
  * Custom setting for Tara theme.
  */
 function tara_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['#attached']['library'][] = 'tara/theme-settings';
   $img_path = $GLOBALS['base_url'] . '/' . \Drupal::service('extension.list.theme')->getPath('tara') . '/images/tarapro.jpg';
   $img = '<img src="' . $img_path . '" alt="tarapro" />';
   $form['tara'] = [
     '#type'       => 'vertical_tabs',
-    '#title'      => '<h3>' . t('Tara Theme Settings') . '</h3>',
+    '#title'      => '<h3 class="settings-form-title"></h3>',
+    // '#title'      => '<h3>' . t('Tara Theme Settings') . '</h3>',
     '#default_tab' => 'general',
   ];
 
@@ -96,12 +98,12 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface $form_
   $form['general']['general_info'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Theme Info'),
-    '#description' => t('<a href="https://drupar.com/theme/tara" target="_blank">Theme Homepage</a> || <a href="https://demo2.drupar.com/tara/" target="_blank">Theme Demo</a> || <a href="https://drupar.com/tara-theme-documentation" target="_blank">Theme Documentation</a> || <a href="https://drupar.com/support" target="_blank">Theme Support</a>'),
+    '#description' => t('<a href="https://drupar.com/theme/tara" target="_blank">Theme Homepage</a> || <a href="https://demo2.drupar.com/tara/" target="_blank">Theme Demo</a> || <a href="https://drupar.com/tara-theme-documentation" target="_blank">Theme Documentation</a> || <a href="https://drupar.com/node/2912/" target="_blank">Theme Support</a>'),
   ];
   $form['general']['general_info_upgrade'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Upgrade To TaraPro for $29 only'),
-    '#description' => t('<a href="https://drupar.com/theme/tarapro" target="_blank">Purchase TaraPro</a> || <a href="//demo2.drupar.com/tarapro/" target="_blank">TaraPro Demo</a>'),
+    '#description' => t('<a href="https://drupar.com/theme/tarapro" target="_blank">Purchase TaraPro</a> || <a href="https://demo2.drupar.com/tarapro/" target="_blank">TaraPro Demo</a>'),
   ];
   // Color tab -> Settings.
   $form['color']['theme_color'] = [
@@ -289,7 +291,7 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface $form_
     ),
     '#title'  => t('<p>Upload Slider Image</p>'),
     '#default_value'  => theme_get_setting('slider_image', 'tara'),
-    '#description'   => t('Tara theme has limitation of single image for slider. Separate image for each slide is available in TaraPro. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $29 only.</a>'),
+    '#description'   => t('<p>Recommended image size is 1920px (width) X 1080px (height).</p><p>Tara theme has limitation of single image for slider. Separate image for each slide is available in TaraPro. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $29 only.</a></p>'),
   ];
   $form['slider']['slider_time_field'] = [
     '#type'          => 'fieldset',
@@ -359,7 +361,10 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface $form_
   $form['content_tab']['home_content'] = [
     '#type'        => 'details',
     '#title'       => t('Homepage content'),
-    '#description' => t('Please follow this tutorial to add content on homepage. <a href="https://drupar.com/tara-theme-documentation/how-add-content-homepage" target="_blank">How to add content on homepage</a>'),
+    '#description' => t('Please follow this tutorials to add content on homepage.</p><ul>
+    <li><a href="https://drupar.com/node/681/" target="_blank">How To Create Homepage</a></li>
+    <li><a href="https://drupar.com/node/631/" target="_blank">How to add content on homepage</a></li>
+  </ul>'),
     '#group' => 'content_tab',
   ];
   // Content -> Page loader
@@ -434,22 +439,39 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface $form_
     '#description'   => t('Tara theme uses following Google fonts: Open Sans, Roboto and Poppins. You can serve these fonts locally or from Google server.'),
   ];
   // Content -> Font icons -> FontAwesome 4
-  $form['content_tab']['icon_tab']['font_icons'] = [
+  $form['content_tab']['icon_tab']['fontawesome4'] = [
     '#type'        => 'fieldset',
-    '#title'       => t('FontAwesome 4 Font Icons'),
-    '#description'   => t('Tara theme has included FontAwesome v4.7 font icons. You can use 600+ icons with Tara theme.<br />Please visit this tutorial page for details. <a href="https://drupar.com/custom-shortcodes-set-two/fontawesome-font-icons" target="_blank">How To Use FontAwesome Icons</a>.'),
+    '#title'       => t('FontAwesome 4'),
+  ];
+  $form['content_tab']['icon_tab']['fontawesome4']['fontawesome_four'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Enable FontAwesome 4 Font Icons'),
+    '#default_value' => theme_get_setting('fontawesome_four'),
+    '#description'   => t('<p>Check this option to enable fontawesome version 4 font icons.</p><p><a href="https://drupar.com/node/665/">How to use FontAwesome 4</a></p>'),
   ];
   // Content -> Font icons -> FontAwesome 5
   $form['content_tab']['icon_tab']['fontawesome5'] = [
     '#type'        => 'fieldset',
     '#title'       => t('FontAwesome 5'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $29 only.</a>'),
+    '#description'   => t('<mark>Do not enable both FontAwesome 5 and FontAwesome 6</mark>'),
+  ];
+  $form['content_tab']['icon_tab']['fontawesome5']['fontawesome_five'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Enable FontAwesome 5 Font Icons'),
+    '#default_value' => theme_get_setting('fontawesome_five'),
+    '#description'   => t('<p>Check this option to enable fontawesome version 5 font icons.</p><p><a href="https://drupar.com/node/2913/">How to use FontAwesome 5</a></p>'),
   ];
   // Content -> Font icons -> FontAwesome 6
   $form['content_tab']['icon_tab']['fontawesome6'] = [
     '#type'        => 'fieldset',
     '#title'       => t('FontAwesome 6'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $29 only.</a>'),
+    '#description'   => t('<mark>Do not enable both FontAwesome 5 and FontAwesome 6</mark>'),
+  ];
+  $form['content_tab']['icon_tab']['fontawesome6']['fontawesome_six'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Enable FontAwesome 6 Font Icons'),
+    '#default_value' => theme_get_setting('fontawesome_six'),
+    '#description'   => t('<p>Check this option to enable fontawesome version 6 font icons.</p><p><a href="https://drupar.com/node/2914/">How to use FontAwesome 6</a></p>'),
   ];
   // Content -> Font icons -> Bootstrap Font Icons
   $form['content_tab']['icon_tab']['bootstrap_icons'] = [

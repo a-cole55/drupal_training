@@ -83,5 +83,8 @@ $('.home-slider').owlCarousel({
 });
 </script>
 {% endif %}
+{% if logged_in %}
+  {{ attach_library('tara/script-header') }}
+{% endif %}
   </body>
 </html>

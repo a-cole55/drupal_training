@@ -50,3 +50,42 @@ Version 10.0.7
 08 Aug, 2023
 +===============================+
 - Added styling for "EU Cookie Compliance" module.
+
+
++===============================+
+Version 10.0.8
+07 Sep, 2023
++===============================+
+- Fixed slider issue with Admin Toolbar Extra Tools module.
+
+
++===============================+
+Version 10.1.0
+08 Sep, 2023
++===============================+
+- Removed fontAwesome v4. This can now be enabled from theme settings.
+- Added FontAwesome v5.15.4 This can be enabled from theme settings.
+- Added FontAwesome v6.4.2 This can be enabled from theme settings.
+- Added a custom font icon library. This is enabled by default.
+- Updated twitter icon by new X icon.
+- Other minor improvements.
+
+
++===============================+
+Version 10.1.1
+09 Sep, 2023
++===============================+
+- Minor improvements.
+
+
++===============================+
+Version 10.1.2
+10 Sep, 2023
++===============================+
+- Block title now uses H2 tag.
+- New template file: views-mini-pager.html.twig
+- New template file: pager.html.twig
+- Added style for mini pager.
+- New style for pager.
+- New button styles.
+- Other minor improvements.

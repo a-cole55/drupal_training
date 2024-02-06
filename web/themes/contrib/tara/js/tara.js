@@ -3,10 +3,12 @@
 jQuery(document).ready(function ($) {
   // Mobile menu.
   $('.mobile-menu').click(function () {
+    $(this).toggleClass('menu-icon-active');
     $(this).next('.primary-menu-wrapper').toggleClass('active-menu');
   });
   $('.close-mobile-menu').click(function () {
     $(this).closest('.primary-menu-wrapper').toggleClass('active-menu');
+    $('.mobile-menu').removeClass('menu-icon-active');
   });
 
   // Full page search.
@@ -30,7 +32,6 @@ jQuery(document).ready(function ($) {
   $('.scrolltop').click(function () {
     $('html, body').scrollTop(0);
   });
-
 // End document ready.
 });
 

@@ -42,6 +42,9 @@
 .size-8x {
   font-size: 8rem;
 }
+/* button
+-------------------------------------------- */
+
 /* column
 -------------------------------------------- */
 .full {
@@ -163,7 +166,12 @@
 }
 .service {
   flex: 1 0 300px;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
   background: #ffffff;
   text-align: center;
   box-shadow: var(--shadow);
@@ -186,27 +194,9 @@
   background: var(--color-primary);
   color: #ffffff;
 }
-.service h3 {
-  margin: 0.8em 0;
-  font-weight: 300;
+.service p:last-of-type {
+  margin: 0;
 }
-.service a.button,
-.service a.button:visited {
-  padding: 10px 16px;
-  background: var(--color-primary);
-  color: #fff;
-  border-radius: 18px;
-  transition: background 0.5s linear;
-}
-.service a.button:hover {
-  background: #222;
-}
-.service a.button::after {
-  content: "\f105";
-  padding-left: 10px;
-  font-family: "FontAwesome";
-}
-
 /* Projects */
 .projects {
   position: relative;
@@ -449,14 +439,52 @@
 .spacer-x3 {
   padding: 3rem 0;
 }
-
-/* Responsive Columns
-------------------------- */
+/* sections
+--------------------------------- */
+.section,
+.section-small,
+.section-large,
 .unit {
-  position: relative;
   display: block;
   width: 100%;
+}
+.section {
+  padding: 2rem 0;
+}
+.section-small {
+  padding: 1rem 0;
+}
+.section-large,
+.unit {
   padding: 3rem 0;
+}
+/* Responsive Columns
+------------------------- */
+.flex,
+.grid,
+.items,
+.columns,
+.grid-container,
+.flex-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+.flex,
+.flex-container,
+.columns {
+  display: flex;
+}
+.columns {
+  flex-wrap: wrap;
+}
+.grid {
+  display: grid;
+}
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
 }
 .items {
   display: grid;
@@ -467,24 +495,26 @@
 .item img {
   display: block;
 }
-.columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
 /* Create Equal width columns with no gap */
 .column {
   flex: 1 1 230px;
   margin: 0;
   padding: 0;
 }
-/* Column Alignment
-------------------------- */
+/* flex-items width */
+.w10,
+.w20,
+.w30,
+.w40,
+.w50,
+.w60,
+.w70,
+.w80,
+.w90 {
+  flex: 1 1 100%;
+}
+/* Flex and grid properties
+--------------------------------- */
 .space-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -508,7 +538,31 @@
       -ms-flex-align: center;
           align-items: center;
 }
-
+.gap {
+  gap: 1rem;
+}
+.gap-2x {
+  gap: 2rem;
+}
+.gap-small {
+  gap: 0.5rem;
+}
+.no-gap {
+  gap: 0;
+}
+/* Flex properties */
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
 /* Box
 ------------------------- */
 .box {
@@ -517,6 +571,6 @@
   box-shadow: var(--shadow);
   padding: 1rem;
 }
-.box p:last-child {
+.box p:last-of-type {
   margin: 0;
 }

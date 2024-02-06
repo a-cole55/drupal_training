@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.publication.field_publication_publisher
     - field.field.node.publication.field_publication_sales
     - field.field.node.publication.field_publication_sample_chapter
+    - field.field.node.publication.field_related_news
     - image.style.cover_publication_large
     - node.type.publication
   module:
@@ -51,7 +52,7 @@ third_party_settings:
       label: Details
       parent_name: ''
       region: content
-      weight: 9
+      weight: 8
       format_type: tabs
       format_settings:
         classes: ''
@@ -91,7 +92,7 @@ content:
       view_mode: content_as_field
       link: false
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
   field_publication_cover:
     type: colorbox
@@ -171,6 +172,14 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_related_news:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
     region: content
   links:
     settings: {  }

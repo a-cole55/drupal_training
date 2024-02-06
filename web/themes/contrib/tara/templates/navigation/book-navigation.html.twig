@@ -37,17 +37,17 @@
       <ul class="book-pager">
       {% if prev_url %}
         <li class="book-pager-item book-pager-item-previous">
-          <a href="{{ prev_url }}" rel="prev" title="{{ 'Go to previous page'|t }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> {{ prev_title }}</a>
+          <a href="{{ prev_url }}" rel="prev" title="{{ 'Go to previous page'|t }}"><i class="icon-arrow-left" aria-hidden="true"></i> {{ prev_title }}</a>
         </li>
       {% endif %}
       {% if parent_url %}
         <li class="book-pager-item book-pager-item-center">
-          <a href="{{ parent_url }}" title="{{ 'Go to parent page'|t }}"><i class="fa fa-sort" aria-hidden="true"></i> {{ 'Up'|t }}</a>
+          <a href="{{ parent_url }}" title="{{ 'Go to parent page'|t }}">{{ 'Up'|t }}</a>
         </li>
       {% endif %}
       {% if next_url %}
         <li class="book-pager-item book-pager-item-next">
-          <a href="{{ next_url }}" rel="next" title="{{ 'Go to next page'|t }}">{{ next_title }} <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          <a href="{{ next_url }}" rel="next" title="{{ 'Go to next page'|t }}">{{ next_title }} <i class="icon-arrow-right" aria-hidden="true"></i></a>
         </li>
       {% endif %}
     </ul>

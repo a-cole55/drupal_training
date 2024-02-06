@@ -9,7 +9,7 @@
 .owl-carousel {
 	display: none;
 	width: 100%;
-	-webkit-tap-highlight-color: transparent; /* position relative and z-index fix webkit rendering fonts issue */
+	-webkit-tap-highlight-color: transparent;
 	position: relative;
 	z-index: 1;
 }
@@ -259,8 +259,8 @@ calculation of the height of the owl-item that breaks page layouts
 }
 .owl-theme .owl-dots .owl-dot {
 	display: inline-block;
-	zoom: 1;
-	*display: inline;
+	transform: scale(1);
+	/* display: inline; */
 }
 .owl-theme .owl-dots .owl-dot span {
 	width: 10px;

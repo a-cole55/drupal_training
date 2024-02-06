@@ -1,16 +1,20 @@
 /* Pages
 -------------------------------------------- */
 /* maintenance page*/
-#maintenance {
-  padding-top: 4rem;
+.header-maintenance {
+  padding: 1rem 0;
+}
+.maintenance-main {
+  width: 100%;
   text-align: center;
+  padding: 2rem 0;
 }
-#maintenance i {
-  color: var(--color-primary);
-  font-size: 4rem;
-  margin: 1rem 0;
+.maintenance-icon {
+  margin-bottom: 1.5rem;
 }
-
+.maintenance-icon svg {
+  max-height: 20rem;
+}
 /* Error page */
 .error-page {
   text-align: center;

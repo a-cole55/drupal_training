@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Drupal\Tests\migrate\Unit;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
@@ -1194,7 +1192,7 @@ class MigrateSqlIdMapTest extends MigrateTestCase {
     $container->set('plugin.manager.migration', $migration_plugin_manager);
     \Drupal::setContainer($container);
 
-    $this->expectDeprecation('Drupal\migrate\Plugin\migrate\id_map\Sql::getMigrationPluginManager() is deprecated in drupal:9.5.0 and is removed from drupal:11.0.0. Use $this->migrationPluginManager instead. See https://www.drupal.org/node/3277306');
+    $this->expectDeprecation('deprecated in drupal:9.5.0 and is removed from drupal:11.0.0. Use $this->migrationPluginManager instead. See https://www.drupal.org/node/3277306');
     $id_map = $this->getIdMap();
     $id_map->getMigrationPluginManager();
   }

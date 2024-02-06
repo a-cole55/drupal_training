@@ -4,7 +4,6 @@ namespace Drupal\Core\Asset;
 
 use Drupal\Component\Utility\Crypt;
 use Drupal\Component\Utility\NestedArray;
-use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
@@ -102,18 +101,8 @@ class AssetResolver implements AssetResolverInterface {
    *   loaded, excluding any libraries that have already been loaded.
    */
   protected function getLibrariesToLoad(AttachedAssetsInterface $assets) {
-    // The order of libraries passed in via assets can differ, so to reduce
-    // variation, first normalize the requested libraries to the minimal
-    // representative set before then expanding the list to include all
-    // dependencies.
-    // @see Drupal\FunctionalTests\Core\Asset\AssetOptimizationTestUmami
-    // @todo: https://www.drupal.org/project/drupal/issues/1945262
-    $libraries = $assets->getLibraries();
-    if ($libraries) {
-      $libraries = $this->libraryDependencyResolver->getMinimalRepresentativeSubset($libraries);
-    }
     return array_diff(
-      $this->libraryDependencyResolver->getLibrariesWithDependencies($libraries),
+      $this->libraryDependencyResolver->getLibrariesWithDependencies($assets->getLibraries()),
       $this->libraryDependencyResolver->getLibrariesWithDependencies($assets->getAlreadyLoadedLibraries())
     );
   }
@@ -171,13 +160,11 @@ class AssetResolver implements AssetResolverInterface {
     $this->moduleHandler->alter('css', $css, $assets, $language);
     $this->themeManager->alter('css', $css, $assets, $language);
 
-    if (!empty($css)) {
-      // Sort CSS items, so that they appear in the correct order.
-      uasort($css, [static::class, 'sort']);
+    // Sort CSS items, so that they appear in the correct order.
+    uasort($css, [static::class, 'sort']);
 
-      if ($optimize) {
-        $css = \Drupal::service('asset.css.collection_optimizer')->optimize($css, $libraries_to_load, $language);
-      }
+    if ($optimize) {
+      $css = \Drupal::service('asset.css.collection_optimizer')->optimize($css, $libraries_to_load, $language);
     }
     $this->cache->set($cid, $css, CacheBackendInterface::CACHE_PERMANENT, ['library_info']);
 
@@ -338,11 +325,6 @@ class AssetResolver implements AssetResolverInterface {
       // Update the $assets object accordingly, so that it reflects the final
       // settings.
       $assets->setSettings($settings);
-      // Convert ajaxPageState to a compressed string from an array, since it is
-      // used by ajax.js to pass to AJAX requests as a query parameter.
-      if (isset($settings['ajaxPageState']['libraries'])) {
-        $settings['ajaxPageState']['libraries'] = UrlHelper::compressQueryParameter($settings['ajaxPageState']['libraries']);
-      }
       $settings_as_inline_javascript = [
         'type' => 'setting',
         'group' => JS_SETTING,

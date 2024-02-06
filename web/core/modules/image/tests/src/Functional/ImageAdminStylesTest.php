@@ -15,7 +15,6 @@ use Drupal\Tests\TestFileCreationTrait;
  * Tests creation, deletion, and editing of image styles and effects.
  *
  * @group image
- * @group #slow
  */
 class ImageAdminStylesTest extends ImageFieldTestBase {
 
@@ -81,7 +80,7 @@ class ImageAdminStylesTest extends ImageFieldTestBase {
     $admin_path = 'admin/config/media/image-styles';
 
     // Setup a style to be created and effects to add to it.
-    $style_name = $this->randomMachineName(10);
+    $style_name = strtolower($this->randomMachineName(10));
     $style_label = $this->randomString();
     $style_path = $admin_path . '/manage/' . $style_name;
     $effect_edits = [
@@ -198,7 +197,7 @@ class ImageAdminStylesTest extends ImageFieldTestBase {
 
     // Test the style overview form.
     // Change the name of the style and adjust the weights of effects.
-    $style_name = $this->randomMachineName(10);
+    $style_name = strtolower($this->randomMachineName(10));
     $style_label = $this->randomMachineName();
     $weight = count($effect_edits);
     $edit = [
@@ -318,14 +317,14 @@ class ImageAdminStylesTest extends ImageFieldTestBase {
    */
   public function testStyleReplacement() {
     // Create a new style.
-    $style_name = $this->randomMachineName(10);
+    $style_name = strtolower($this->randomMachineName(10));
     $style_label = $this->randomString();
     $style = ImageStyle::create(['name' => $style_name, 'label' => $style_label]);
     $style->save();
     $style_path = 'admin/config/media/image-styles/manage/';
 
     // Create an image field that uses the new style.
-    $field_name = $this->randomMachineName(10);
+    $field_name = strtolower($this->randomMachineName(10));
     $this->createImageField($field_name, 'article');
     \Drupal::service('entity_display.repository')
       ->getViewDisplay('node', 'article')
@@ -352,7 +351,7 @@ class ImageAdminStylesTest extends ImageFieldTestBase {
     $this->assertSession()->responseContains($file_url_generator->transformRelative($style->buildUrl($original_uri)));
 
     // Rename the style and make sure the image field is updated.
-    $new_style_name = $this->randomMachineName(10);
+    $new_style_name = strtolower($this->randomMachineName(10));
     $new_style_label = $this->randomString();
     $edit = [
       'name' => $new_style_name,
@@ -442,7 +441,7 @@ class ImageAdminStylesTest extends ImageFieldTestBase {
     $admin_path = 'admin/config/media/image-styles';
 
     // Create a new style.
-    $style_name = $this->randomMachineName(10);
+    $style_name = strtolower($this->randomMachineName(10));
     $style = ImageStyle::create(['name' => $style_name, 'label' => $this->randomString()]);
     $style->save();
 
@@ -472,13 +471,13 @@ class ImageAdminStylesTest extends ImageFieldTestBase {
    */
   public function testConfigImport() {
     // Create a new style.
-    $style_name = $this->randomMachineName(10);
+    $style_name = strtolower($this->randomMachineName(10));
     $style_label = $this->randomString();
     $style = ImageStyle::create(['name' => $style_name, 'label' => $style_label]);
     $style->save();
 
     // Create an image field that uses the new style.
-    $field_name = $this->randomMachineName(10);
+    $field_name = strtolower($this->randomMachineName(10));
     $this->createImageField($field_name, 'article');
     \Drupal::service('entity_display.repository')
       ->getViewDisplay('node', 'article')

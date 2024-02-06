@@ -93,16 +93,15 @@
    */
   Drupal.behaviors.states = {
     attach(context, settings) {
-      const elements = once('states', '[data-drupal-states]', context);
-      const il = elements.length;
-
+      const $states = $(context).find('[data-drupal-states]');
+      const il = $states.length;
       for (let i = 0; i < il; i++) {
         const config = JSON.parse(
-          elements[i].getAttribute('data-drupal-states'),
+          $states[i].getAttribute('data-drupal-states'),
         );
         Object.keys(config || {}).forEach((state) => {
           new states.Dependent({
-            element: $(elements[i]),
+            element: $($states[i]),
             state: states.State.sanitize(state),
             constraints: config[state],
           });
@@ -121,7 +120,7 @@
    *
    * @constructor Drupal.states.Dependent
    *
-   * @param {{state: Drupal.states.state, constraints: *, element: (*|jQuery|HTMLElement)}} args
+   * @param {object} args
    *   Object with the following keys (all of which are required)
    * @param {jQuery} args.element
    *   A jQuery object of the dependent element
@@ -478,7 +477,7 @@
       // Attach the event callback.
       this.element.on(
         event,
-        function (e) {
+        $.proxy(function (e) {
           const value = valueFn.call(this.element, e);
           // Only trigger the event if the value has actually changed.
           if (oldValue !== value) {
@@ -489,18 +488,18 @@
             });
             oldValue = value;
           }
-        }.bind(this),
+        }, this),
       );
 
       states.postponed.push(
-        function () {
+        $.proxy(function () {
           // Trigger the event once for initialization purposes.
           this.element.trigger({
             type: `state:${this.state}`,
             value: oldValue,
             oldValue: null,
           });
-        }.bind(this),
+        }, this),
       );
     },
   };
@@ -574,7 +573,7 @@
       collapsed(e) {
         return typeof e !== 'undefined' && 'value' in e
           ? e.value
-          : !this[0].hasAttribute('open');
+          : !this.is('[open]');
       },
     },
   };
@@ -725,14 +724,9 @@
 
   $document.on('state:visible', (e) => {
     if (e.trigger) {
-      let $element = $(e.target).closest(
-        '.js-form-item, .js-form-submit, .js-form-wrapper',
-      );
-      // For links, update the state of itself instead of the wrapper.
-      if (e.target.tagName === 'A') {
-        $element = $(e.target);
-      }
-      $element.toggle(e.value);
+      $(e.target)
+        .closest('.js-form-item, .js-form-submit, .js-form-wrapper')
+        .toggle(e.value);
     }
   });
 
@@ -748,7 +742,7 @@
 
   $document.on('state:collapsed', (e) => {
     if (e.trigger) {
-      if (e.target.hasAttribute('open') === e.value) {
+      if ($(e.target).is('[open]') === e.value) {
         $(e.target).find('> summary').trigger('click');
       }
     }

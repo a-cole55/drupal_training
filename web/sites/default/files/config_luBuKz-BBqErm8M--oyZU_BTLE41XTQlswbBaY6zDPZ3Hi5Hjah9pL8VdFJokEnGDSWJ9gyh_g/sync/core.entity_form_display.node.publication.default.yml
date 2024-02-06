@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.publication.field_publication_publisher
     - field.field.node.publication.field_publication_sales
     - field.field.node.publication.field_publication_sample_chapter
+    - field.field.node.publication.field_related_news
     - image.style.thumbnail
     - node.type.publication
   module:
@@ -180,6 +181,12 @@ content:
     region: content
     settings:
       progress_indicator: throbber
+    third_party_settings: {  }
+  field_related_news:
+    type: options_buttons
+    weight: 28
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

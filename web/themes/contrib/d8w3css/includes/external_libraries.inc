@@ -51,11 +51,11 @@ $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_google_f
 
 $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_site_gf'] = [
   '#type' => 'select',
-  '#title' => t('50 Global Site Fonts: Choose the site font - The font will be applied to the whole website.<a target="_blank" href="https://drupal8-w3css-theme.flashwebcenter.com/w3css-theme-google-fonts-global-site-fonts"> Click here to view a live demo for all available fonts.</a>'),
+  '#title' => t('50 Global Site Fonts: Choose the site font - The font will be applied to the whole website.<a target="_blank" href="flex6.com/node/105"> Click here to view a live demo for all available fonts.</a>'),
   '#description'   => t('<p>Global Site Font CSS Classes: open-sans, abel, alegreya-sans, alegreya-sans-sc, amita, archivo-narrow, arimo, arvo, barlow, barlow-semi-condensed
-, bitter, cairo, comfortaa, courgette, domine, dosis, exo-2, fira-sans, glegoo, hind-siliguri, ibm-plex-sans, inconsolata, josefin-sans, kanit, kavivanar, lato, libre-baskerville, lora, merienda, merriweather, montserrat, mukta, nunito, oranienbaum, oswald, oxygen, playfair-display, poppins, prompt, pt-serif, quicksand, raleway, roboto, roboto-condensed, roboto-mono, spline-sans, source-sans-pro, titillium-web, ubuntu, work-sans. </p>'),
+, bitter, cairo, comfortaa, courgette, domine, dosis, exo-2, fira-sans, glegoo, hind-siliguri, ibm-plex-sans, inconsolata, josefin-sans, kanit, kavivanar, lato, libre-baskerville, lora, merienda, merriweather, montserrat, mukta, nunito, oranienbaum, oswald, oxygen, playfair-display, poppins, prompt, pt-serif, quicksand, raleway, roboto, roboto-condensed, roboto-mono, spline-sans, source-sans-3, titillium-web, ubuntu, work-sans. </p>'),
   '#options' => [
-    'none' => t('Default - Open Sans - sans-serif'),
+    'none' => t('None'),
     'd8w3css-abel' => t('Abel - sans-serif'),
     'd8w3css-alegreya-sans' => t('Alegreya Sans - sans-serif'),
     'd8w3css-alegreya-sans-sc' => t('Alegreya Sans SC - sans-serif'),
@@ -88,6 +88,7 @@ $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_site_gf'
     'd8w3css-montserrat' => t('Montserrat - sans-serif'),
     'd8w3css-mukta' => t('Mukta - sans-serif'),
     'd8w3css-nunito' => t('Nunito - sans-serif'),
+    'd8w3css-open-sans' => t('Open Sans - sans-serif'),
     'd8w3css-oranienbaum' => t('Oranienbaum - serif'),
     'd8w3css-oswald' => t('Oswald - sans-serif'),
     'd8w3css-oxygen' => t('Oxygen - sans-serif'),
@@ -101,7 +102,7 @@ $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_site_gf'
     'd8w3css-roboto-condensed' => t('Roboto Condensed - sans-serif'),
     'd8w3css-roboto-mono' => t('Roboto Mono - monospace'),
     'd8w3css-spline-sans' => t('Spline Sans - sans-serif'),
-    'd8w3css-source-sans-pro' => t('Source Sans Pro - sans-serif'),
+    'd8w3css-source-sans-3' => t('Source Sans 3 - sans-serif'),
     'd8w3css-titillium-web' => t('Titillium Web - sans-serif'),
     'd8w3css-ubuntu' => t('Ubuntu - sans-serif'),
     'd8w3css-work-sans' => t('Work Sans - sans-serif'),
@@ -112,8 +113,8 @@ $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_site_gf'
 
 $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_site_gfh'] = [
   '#type' => 'select',
-  '#title' => t('26 Heading Fonts: Choose the heading font - The font will be applied to h1, h2 and h3 only.<a target="_blank" href="https://drupal8-w3css-theme.flashwebcenter.com/w3css-theme-google-fonts-heading-fonts"> Click here to view a live demo for all available fonts.</a>'),
-  '#description'   => t('<p>THeading Font CSS Classes: abril-fatface, aladin, anton, archivo-black, bebas-neue, big-shoulders-stencil-display, big-shoulders-stencil-text, black-ops-one, bree-serif, cinzel, dancing-script, dm-serif-display, doppio-one, fjalla-one, francois-one, fredericka-the-great, fredoka-one, hammersmith-one, indie-flower, kalam, lobster-two, patrick-hand, prosto-one, righteous, staatliches, yanone-kaffeesatz.</p>'),
+  '#title' => t('26 Heading Fonts: Choose the heading font - The font will be applied to h1, h2 and h3 only.<a target="_blank" href="flex6.com/node/104"> Click here to view a live demo for all available fonts.</a>'),
+  '#description'   => t('<p>THeading Font CSS Classes: abril-fatface, aladin, anton, archivo-black, bebas-neue, big-shoulders-stencil-display, big-shoulders-stencil-text, black-ops-one, bree-serif, cinzel, dancing-script, dm-serif-display, doppio-one, fjalla-one, francois-one, fredericka-the-great, fredoka, hammersmith-one, indie-flower, kalam, lobster-two, patrick-hand, prosto-one, righteous, staatliches, yanone-kaffeesatz.</p>'),
   '#options' => [
     'none' => t('None'),
     'd8w3css-abril-fatface' => t('Abril Fatface  - cursive'),
@@ -130,9 +131,9 @@ $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_site_gfh
     'd8w3css-dm-serif-display' => t('DM Serif Display - serif'),
     'd8w3css-doppio-one' => t('Doppio - sans-serif'),
     'd8w3css-fjalla-one' => t('Fjalla One - sans-serif'),
-    'd8w3css-francois-one' => t('Francois - sans-serif'),
+    'd8w3css-francois-one' => t('Francois One - sans-serif'),
     'd8w3css-fredericka-the-great' => t('Fredericka The Great  - cursive'),
-    'd8w3css-fredoka-one' => t('Fredoka One - cursive'),
+    'd8w3css-fredoka' => t('Fredoka - cursive'),
     'd8w3css-hammersmith-one' => t('Hammersmith One - sans-serif'),
     'd8w3css-indie-flower' => t('Indie Flower - cursive'),
     'd8w3css-kalam' => t('Kalam - cursive'),
@@ -149,7 +150,7 @@ $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_site_gfh
 
 $form['drupal8_w3css_theme_settings']['w3_external_libraries']['d8w3css_site_gfs'] = [
   '#type' => 'select',
-  '#title' => t('25 Special Fonts: They are not applied to any html tags by default and they are only imported. Each font library has a CSS class that you can apply to any html tag. <a target="_blank" href="https://drupal8-w3css-theme.flashwebcenter.com/w3css-theme-google-fonts-special-fonts">Click here to view a live demo for all available fonts.</a>'),
+  '#title' => t('25 Special Fonts: They are not applied to any html tags by default and they are only imported. Each font library has a CSS class that you can apply to any html tag. <a target="_blank" href="flex6.com/node/102">Click here to view a live demo for all available fonts.</a>'),
   '#description'   => t('<p>Spcial Font CSS Classes: akronim, barriecito, bungee-shade, ceviche-one, creepster, faster-one, finger-paint, frijole, irish-grover, kumar-one, londrina-outline, megrim, metal-mania, monoton, moo-lah-lah, new-rocker, nosifer, pirata-one, ruslan-display, rye, sancreek, slackey, trade-winds, train-one, unifrakturmaguntia.</p>'),
   '#options' => [
     'none' => t('None'),

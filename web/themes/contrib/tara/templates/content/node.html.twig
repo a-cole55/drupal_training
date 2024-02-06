@@ -69,6 +69,7 @@
 {%
 set node_classes = [
   'node',
+  'node-type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node-promoted',
   node.isSticky() ? 'node-sticky',
   not node.isPublished() ? 'node-unpublished',
@@ -91,10 +92,10 @@ set node_classes = [
     {% endif %}
     <div{{ author_attributes.addClass('node-submitted-details') }}>
       <div class="node-user">
-        {% trans %}<i class="fa fa-user" aria-hidden="true"></i> {{  author_name }}
+        {% trans %}<i class="icon-user" aria-hidden="true"></i> {{  author_name }}
       </div>
       <div class="node-date">
-        <i class="fa fa-calendar" aria-hidden="true"></i> {{ date }}{% endtrans %}
+        <i class="icon-calendar" aria-hidden="true"></i> {{ date }}{% endtrans %}
       </div>
       {% if node_tags and content.field_tags %}
       <div class="node-tags">

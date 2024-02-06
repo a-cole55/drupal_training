@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Drupal\Tests\Core\Test;
 
 use Composer\Autoload\ClassLoader;
@@ -64,7 +62,7 @@ class TestDiscoveryTest extends UnitTestCase {
       [
         'name' => 'Drupal\FunctionalTests\BrowserTestBaseTest',
         'group' => 'browsertestbase',
-        'groups' => ['browsertestbase', '#slow'],
+        'groups' => ['browsertestbase'],
         'description' => 'Tests BrowserTestBase functionality.',
         'type' => 'PHPUnit-Functional',
       ],

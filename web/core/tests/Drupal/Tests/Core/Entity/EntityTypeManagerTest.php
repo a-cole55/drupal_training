@@ -1,6 +1,9 @@
 <?php
 
-declare(strict_types=1);
+/**
+ * @file
+ * Contains \Drupal\Tests\Core\Entity\EntityTypeManagerTest.
+ */
 
 namespace Drupal\Tests\Core\Entity;
 

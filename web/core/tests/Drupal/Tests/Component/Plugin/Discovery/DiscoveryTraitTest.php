@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Drupal\Tests\Component\Plugin\Discovery;
 
 use Drupal\Component\Plugin\Exception\PluginNotFoundException;
@@ -37,6 +35,7 @@ class DiscoveryTraitTest extends TestCase {
     $trait = $this->getMockForTrait('Drupal\Component\Plugin\Discovery\DiscoveryTrait');
     // Un-protect the method using reflection.
     $method_ref = new \ReflectionMethod($trait, 'doGetDefinition');
+    $method_ref->setAccessible(TRUE);
     // Call doGetDefinition, with $exception_on_invalid always FALSE.
     $this->assertSame(
       $expected,
@@ -68,6 +67,7 @@ class DiscoveryTraitTest extends TestCase {
     $trait = $this->getMockForTrait('Drupal\Component\Plugin\Discovery\DiscoveryTrait');
     // Un-protect the method using reflection.
     $method_ref = new \ReflectionMethod($trait, 'doGetDefinition');
+    $method_ref->setAccessible(TRUE);
     // Call doGetDefinition, with $exception_on_invalid always TRUE.
     $this->expectException(PluginNotFoundException::class);
     $method_ref->invoke($trait, $definitions, $plugin_id, TRUE);

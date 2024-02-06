@@ -50,13 +50,8 @@
 
 /* Book links */
 .book-add-child::before {
-  font-family: "FontAwesome";
-  content: '\f055';
-  padding-right: 4px;
-}
-.book-printer::before {
-  font-family: "FontAwesome";
-  content: '\f02f';
+  font-family: "tara";
+  content: "\e001";
   padding-right: 4px;
 }
 .page-type-book .node-links-container {

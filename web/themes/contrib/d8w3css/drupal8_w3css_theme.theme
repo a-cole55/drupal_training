@@ -203,6 +203,7 @@ function drupal8_w3css_theme_preprocess_page(&$variables) {
   }
   // Social Media's $variables.
   $svar = [
+    'social_media_size',
     'show_social_icon',
     'facebook_url',
     'twitter_url',
@@ -346,14 +347,14 @@ function drupal8_w3css_theme_preprocess_maintenance_page(&$variables) {
 function drupal8_w3css_theme_page_attachments_alter(array &$attachments) {
 
   // Load default fonts - Global.
-  if (!theme_get_setting('d8w3css_site_gf') || (theme_get_setting('d8w3css_site_gf') == 'none')) {
-    if (theme_get_setting('d8w3css_google_font_local')) {
-      $attachments['#attached']['library'][] = 'drupal8_w3css_theme/d8w3css-gfin-open-sans';
-    }
-    else {
-      $attachments['#attached']['library'][] = 'drupal8_w3css_theme/d8w3css-gfex-open-sans';
-    }
-  }
+  // if (!theme_get_setting('d8w3css_site_gf') || (theme_get_setting('d8w3css_site_gf') == 'none')) {
+  //   if (theme_get_setting('d8w3css_google_font_local')) {
+  //     $attachments['#attached']['library'][] = 'drupal8_w3css_theme/d8w3css-gfin-open-sans';
+  //   }
+  //   else {
+  //     $attachments['#attached']['library'][] = 'drupal8_w3css_theme/d8w3css-gfex-open-sans';
+  //   }
+  // }
   // Load google fonts locally - Global.
   if (theme_get_setting('d8w3css_google_font_local') && theme_get_setting('d8w3css_site_gf')) {
     $in_font = theme_get_setting('d8w3css_site_gf');
@@ -413,6 +414,16 @@ function drupal8_w3css_theme_page_attachments_alter(array &$attachments) {
 
     case 4:
       $attachments['#attached']['library'][] = 'drupal8_w3css_theme/font-awesome-6-ex';
+      break;
+  }
+
+  switch (theme_get_setting('social_media_size')) {
+    case 1:
+      $attachments['#attached']['library'][] = 'drupal8_w3css_theme/social-media-icon-size-m';
+      break;
+
+    case 2:
+      $attachments['#attached']['library'][] = 'drupal8_w3css_theme/social-media-icon-size-l';
       break;
   }
 

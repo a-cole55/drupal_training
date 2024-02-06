@@ -30,34 +30,35 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('main-menu') }}>
+      <ul{{ attributes.addClass('main-menu menu') }}>
     {% else %}
       <ul class="submenu">
     {% endif %}
     {% for item in items %}
       {%
         set item_classes = [
+          'menu-item',
           'main-menu-item',
+          'menu-item-level-' ~ (menu_level + 1),
           item.is_expanded ? 'expanded',
           item.is_collapsed ? 'collapsed',
-          item.in_active_trail ? 'active',
+          item.below ? 'menu-item-has-children',
+          item.in_active_trail ? 'active menu-item-active',
         ]
       %}
-      {% if menu_level == 0 and item.is_collapsed %}
-        <li {{ item.attributes.addClass(item_classes) }}>
-        <a href="{{ item.url }}">{{ item.title }} <span class="dropdown-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-      {% elseif menu_level == 0 and item.is_expanded %}
-        <li {{ item.attributes.addClass(item_classes) }}>
-        <a href="{{ item.url }}">{{ item.title }} <span class="dropdown-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-      {% else %}
-        <li{{ item.attributes.addClass(item_classes) }}>
+      <li{{ item.attributes.addClass(item_classes) }}>
+        {#
+          A unique HTML ID should be used, but that isn't available through
+          Twig yet, so the |clean_id filter is used for now.
+          @see https://www.drupal.org/project/drupal/issues/3115445
+        #}
         {{ link(item.title, item.url) }}
-      {% endif %}
-      {% if item.below %}
-        {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav'), menu_level + 1) }}
-      {% endif %}
+
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
       </li>
-    {% endfor %}
+      {% endfor %}
     </ul>
   {% endif %}
 {% endmacro %}

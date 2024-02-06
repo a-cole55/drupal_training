@@ -12,16 +12,17 @@
 /* content warpper including main, sidebar */
 .main-wrapper {
   position: relative;
-  padding: 20px 0 50px 0;
+  display: block;
   background: var(--bg-body);
+  padding: 1rem 0;
   z-index: 2;
 }
 .main-container {
   position: relative;
   display: grid;
+  gap: 1rem;
   width: 100%;
   margin: 0;
-  padding: 0;
 }
 /* Main */
 .no-sidebar .main-container {
