@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/aggregator": "^2.2",
         "drupal/allowed_formats": "^2.0",
         "drupal/back_to_top": "^3.0",
         "drupal/bartik": "^1.0",

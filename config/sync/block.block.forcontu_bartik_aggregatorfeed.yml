@@ -1,0 +1,22 @@
+uuid: 447e70ed-4907-4868-b8c8-1f4f2db951e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - aggregator
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_aggregatorfeed
+theme: forcontu_bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: aggregator_feed_block
+settings:
+  id: aggregator_feed_block
+  label: 'Planet Drupal'
+  label_display: visible
+  provider: aggregator
+  block_count: 10
+  feed: '1'
+visibility: {  }

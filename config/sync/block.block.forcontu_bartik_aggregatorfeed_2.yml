@@ -1,0 +1,22 @@
+uuid: 0a6db1be-8a9d-43a3-a84b-813de95bcda5
+langcode: en
+status: true
+dependencies:
+  module:
+    - aggregator
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_aggregatorfeed_2
+theme: forcontu_bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: aggregator_feed_block
+settings:
+  id: aggregator_feed_block
+  label: 'Aggregator feed'
+  label_display: visible
+  provider: aggregator
+  block_count: 5
+  feed: '2'
+visibility: {  }
