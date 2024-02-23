@@ -25,39 +25,6 @@ jobs:
 
             echo 'changing to right directory';
             cd public_html/sb/sb1
-            env
-name: forcontu be1 drupal build
-on: [push]
-
-permissions:
-  statuses: write
-  pull-requests: write
-
-jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set commit status to pending
-        uses: ouzi-dev/commit-status-updater@v2
-        with:
-          url: http://be1.petecarr.training.forcontu.com/
-          description: "Drupal / composer build status"
-          name: "drupal build"
-      - name: Dump context
-        uses: crazy-max/ghaction-dump-context@v1
-      - name: executing remote ssh commands using password
-        if: github.ref == 'refs/heads/main'
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-
-            echo 'changing to right directory';
-            cd public_html/sb/sb1
 
             echo 'fetching latest changes'
             git fetch --all --prune
