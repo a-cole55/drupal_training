@@ -874,3 +874,9 @@ $databases['default']['default'] = array (
 //$settings['config_sync_directory'] = 'sites/default/files/config_luBuKz-BBqErm8M--oyZU_BTLE41XTQlswbBaY6zDPZ3Hi5Hjah9pL8VdFJokEnGDSWJ9gyh_g/sync';
 $settings['config_sync_directory'] = '../config/sync';
 
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}
