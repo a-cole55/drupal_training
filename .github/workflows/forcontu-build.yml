@@ -10,7 +10,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-
+      - name: Set commit status to pending
+        uses: ouzi-dev/commit-status-updater@v2
+        with:
+          url: http://sb1.arnicole.training.forcontu.com/
+          description: "Drupal / composer build status"
+          name: "drupal build"
       - name: Dump context
         uses: crazy-max/ghaction-dump-context@v1
       - name: executing remote ssh commands using password
@@ -63,3 +68,12 @@ jobs:
             echo 'importing config';
             drush cim -y
             if [ $? -ne 0 ]; then exit 1; fi
+
+      - name: Update commit status at the end
+        uses: ouzi-dev/commit-status-updater@v2
+        if: always()
+        with:
+          status: "${{ job.status }}"
+          url: http://sb1.arnicole.training.forcontu.com/
+          description: "Drupal / composer build status"
+          name: "drupal build"
