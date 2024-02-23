@@ -1,0 +1,28 @@
+name: forcontu s1 drupal build
+on: [push]
+
+permissions:
+  statuses: write
+  pull-requests: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Dump context
+        uses: crazy-max/ghaction-dump-context@v1
+      - name: executing remote ssh commands using password
+        if: github.ref == 'refs/heads/main'
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+
+            echo 'changing to right directory';
+            cd public_html/sb/sb1
+            env
