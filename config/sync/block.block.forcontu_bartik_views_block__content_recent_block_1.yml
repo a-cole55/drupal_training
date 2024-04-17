@@ -1,0 +1,24 @@
+uuid: 76d88835-94e2-4f6e-955c-e059dd81b18e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_recent
+  module:
+    - views
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_views_block__content_recent_block_1
+theme: forcontu_bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:content_recent-block_1'
+settings:
+  id: 'views_block:content_recent-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '3'
+visibility: {  }

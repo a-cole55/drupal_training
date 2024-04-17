@@ -12,6 +12,7 @@ dependencies:
     - contact
     - file
     - filter
+    - google_analytics
     - media
     - node
     - search
@@ -29,6 +30,7 @@ permissions:
   - 'access user contact forms'
   - 'create forum content'
   - 'delete own files'
+  - 'opt-in or out of google analytics tracking'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

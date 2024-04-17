@@ -1,0 +1,17 @@
+#!/bin/bash
+## Description: Run fetch latest db file inside the host
+## Usage: fetch-db
+## Example: "ddev fetch-db
+## ProjectTypes: drupal9, drupal10, backdrop
+
+cd $DDEV_COMPOSER_ROOT
+echo 'fetching fresh copy of db...'
+if [ ! -d .ddev/downloads ]; then
+  mkdir -p .ddev/downloads
+fi
+ssh $FC_USER@$FC_HOST -p $FC_PORT mysqldump -u $FC_USER -p$FC_PASS -h 127.0.0.1 ${FC_USER}_$FC_SITE > .ddev/downloads/db.sql
+gzip --force .ddev/downloads/db.sql
+echo 'done'
+echo 'you may want to run "ddev import-db --file=.ddev/downloads/db.sql.gz"'
+echo 'and then "ddev drush_reset"'
+echo 'alternatively, you can just run "ddev idb" to import and reset the db'

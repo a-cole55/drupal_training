@@ -1,0 +1,23 @@
+uuid: fc028755-2b29-43da-b66f-23a95f7c78c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - statistics
+  theme:
+    - forcontu_bartik
+id: forcontu_bartik_popularcontent
+theme: forcontu_bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: statistics_popular_block
+settings:
+  id: statistics_popular_block
+  label: 'Popular content'
+  label_display: visible
+  provider: statistics
+  top_day_num: 3
+  top_all_num: 3
+  top_last_num: 3
+visibility: {  }

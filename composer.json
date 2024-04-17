@@ -28,6 +28,7 @@
         "drupal/editor_advanced_link": "^2.2",
         "drupal/editor_file": "^1.7",
         "drupal/field_group": "^3.4",
+        "drupal/google_analytics": "^4.0",
         "drupal/hierarchical_taxonomy_menu": "^2.0@beta",
         "drupal/image_effects": "^3.4",
         "drupal/jquery_ui": "^1.6",
