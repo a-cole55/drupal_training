@@ -1,0 +1,51 @@
+uuid: 9da7e2fd-bc9d-4e1c-b5c5-52de23dae082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.enrollment.field_enrollment_comments
+    - field.field.paragraph.enrollment.field_enrollment_date
+    - field.field.paragraph.enrollment.field_enrollment_status
+    - field.field.paragraph.enrollment.field_enrollment_user
+    - paragraphs.paragraphs_type.enrollment
+  module:
+    - datetime
+    - text
+id: paragraph.enrollment.default
+targetEntityType: paragraph
+bundle: enrollment
+mode: default
+content:
+  field_enrollment_comments:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_enrollment_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_enrollment_status:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_enrollment_user:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

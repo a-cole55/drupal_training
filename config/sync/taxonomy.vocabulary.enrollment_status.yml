@@ -1,0 +1,8 @@
+uuid: 55453687-ba7c-495e-a429-4d1329b977c2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Enrollment status'
+vid: enrollment_status
+description: ''
+weight: 0

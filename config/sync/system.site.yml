@@ -6,8 +6,8 @@ name: 'Expert in Drupal 9 Site Building'
 mail: arniqua_c@yahoo.com
 slogan: 'Drupal Today, Drupal Tomorrow'
 page:
-  403: ''
-  404: /search404
+  403: /node/44
+  404: /node/43
   front: /node
 admin_compact_mode: false
 weight_select_max: 100

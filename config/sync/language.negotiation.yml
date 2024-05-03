@@ -8,8 +8,12 @@ url:
     en: ''
     es: es
     en-x-simple: en-x-simple
+    de: de
+    fr: fr
   domains:
     en: ''
     es: ''
     en-x-simple: ''
+    de: ''
+    fr: ''
 selected_langcode: site_default

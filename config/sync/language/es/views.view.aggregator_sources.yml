@@ -2,6 +2,7 @@ display:
   default:
     display_title: 'Por defecto'
     display_options:
+      title: Fuentes
       pager:
         options:
           tags:
@@ -28,3 +29,6 @@ display:
           separator: ', '
   page_1:
     display_title: Página
+    display_options:
+      menu:
+        title: Fuentes

@@ -10,3 +10,5 @@ publishers: 0
 publishers_message: 'Term %term already exists in vocabulary %vocabulary.'
 publication_genres: 0
 publication_genres_message: 'Term %term already exists in vocabulary %vocabulary.'
+enrollment_status: 0
+enrollment_status_message: 'Term %term already exists in vocabulary %vocabulary.'

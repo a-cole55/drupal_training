@@ -680,8 +680,8 @@ class HierarchicalTaxonomyMenuBlock extends BlockBase implements ContainerFactor
           'hierarchical_taxonomy_menu/hierarchical_taxonomy_menu',
         ],
         'drupalSettings' => [
-          'stayOpen' => $this->configuration['stay_open'],
-          'interactiveParentMenu' => $this->configuration['interactive_parent'],
+          'stayOpen' => (bool) $this->configuration['stay_open'],
+          'interactiveParentMenu' => (bool) $this->configuration['interactive_parent'],
         ],
       ],
     ];

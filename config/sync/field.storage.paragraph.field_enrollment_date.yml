@@ -1,0 +1,20 @@
+uuid: a80d6eaa-a542-4553-afe2-3a7f1b648db7
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_enrollment_date
+field_name: field_enrollment_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

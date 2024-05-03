@@ -1,0 +1,52 @@
+uuid: acbab3b6-56df-458a-9356-382f81d438bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.enrollment.field_enrollment_comments
+    - field.field.paragraph.enrollment.field_enrollment_date
+    - field.field.paragraph.enrollment.field_enrollment_status
+    - field.field.paragraph.enrollment.field_enrollment_user
+    - paragraphs.paragraphs_type.enrollment
+  module:
+    - datetime
+    - text
+id: paragraph.enrollment.default
+targetEntityType: paragraph
+bundle: enrollment
+mode: default
+content:
+  field_enrollment_comments:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_enrollment_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_enrollment_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_enrollment_user:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

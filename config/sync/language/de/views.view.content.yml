@@ -1,0 +1,45 @@
+display:
+  default:
+    display_title: Standard
+    display_options:
+      fields:
+        title:
+          label: Titel
+        type:
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_false: 'Nicht veröffentlicht'
+            format_custom_true: Veröffentlicht
+        operations:
+          label: Aktionen
+      pager:
+        options:
+          tags:
+            next: 'Nächste Seite ›'
+            previous: '‹ Vorherige Seite'
+      exposed_form:
+        options:
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      filters:
+        title:
+          expose:
+            label: Titel
+        status:
+          expose:
+            label: Status
+          group_info:
+            group_items:
+              1:
+                title: Veröffentlicht
+              2:
+                title: 'Nicht veröffentlicht'
+        langcode:
+          expose:
+            label: Sprache
+  page_1:
+    display_title: Seite

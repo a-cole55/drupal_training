@@ -1,0 +1,12 @@
+uuid: df2fa3d1-be71-4996-8396-0a3d41ba8719
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: boOxRvu533PdazqquOAQhGK6j7P-QrZ01_6rKpuO9XM
+id: text
+label: Text
+icon_uuid: null
+icon_default: null
+description: 'Use <em>Text</em> for adding a text.'
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: 880c5cf5-3033-44dd-a7e6-52d7017d84ab
+langcode: en
+status: true
+dependencies: {  }
+id: enrollment
+label: Enrollment
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

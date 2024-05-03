@@ -1,0 +1,26 @@
+uuid: 9f230aea-3b7c-4193-8b58-545e6de233d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enrollment_comments
+    - paragraphs.paragraphs_type.enrollment
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: paragraph.enrollment.field_enrollment_comments
+field_name: field_enrollment_comments
+entity_type: paragraph
+bundle: enrollment
+label: Comments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

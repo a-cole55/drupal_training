@@ -15,6 +15,7 @@ dependencies:
     - google_analytics
     - media
     - node
+    - paragraphs_type_permissions
     - search
     - system
 _core:
@@ -39,3 +40,10 @@ permissions:
   - 'use text format comments'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view paragraph content from_library'
+  - 'view paragraph content image_text'
+  - 'view paragraph content images'
+  - 'view paragraph content nested_paragraph'
+  - 'view paragraph content text'
+  - 'view paragraph content text_image'
+  - 'view paragraph content user'

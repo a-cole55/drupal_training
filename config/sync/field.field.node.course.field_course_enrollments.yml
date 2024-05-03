@@ -1,0 +1,52 @@
+uuid: 99029765-ffd4-455f-b5da-d5e42af1dc22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_enrollments
+    - node.type.course
+    - paragraphs.paragraphs_type.enrollment
+  module:
+    - entity_reference_revisions
+id: node.course.field_course_enrollments
+field_name: field_course_enrollments
+entity_type: node
+bundle: course
+label: Enrollments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      enrollment: enrollment
+    negate: 0
+    target_bundles_drag_drop:
+      enrollment:
+        weight: 9
+        enabled: true
+      from_library:
+        weight: 10
+        enabled: false
+      image_text:
+        weight: 12
+        enabled: false
+      images:
+        weight: 11
+        enabled: false
+      nested_paragraph:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+      text_image:
+        weight: 15
+        enabled: false
+      user:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions
