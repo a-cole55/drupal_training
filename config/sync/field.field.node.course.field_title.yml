@@ -1,0 +1,26 @@
+uuid: ca5fd1fd-0982-4aea-94a6-da44922b33bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title
+    - node.type.course
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.course.field_title
+field_name: field_title
+entity_type: node
+bundle: course
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

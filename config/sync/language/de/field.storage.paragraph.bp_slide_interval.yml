@@ -1,0 +1,18 @@
+settings:
+  allowed_values:
+    -
+      label: Keine
+    -
+      label: '1 Sekunde'
+    -
+      label: '2 Sekunden'
+    -
+      label: '3 Sekunden'
+    -
+      label: '4 Sekunden'
+    -
+      label: '5 Sekunden'
+    -
+      label: '6 Sekunden'
+    -
+      label: '7 Sekunden'

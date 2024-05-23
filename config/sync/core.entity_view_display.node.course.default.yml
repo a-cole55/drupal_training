@@ -8,10 +8,11 @@ dependencies:
     - field.field.node.course.field_course_enrollments
     - field.field.node.course.field_course_location
     - field.field.node.course.field_course_start_date
+    - field.field.node.course.field_title
     - node.type.course
   module:
     - datetime
-    - entity_reference_revisions
+    - reference_table_formatter
     - text
     - user
 id: node.course.default
@@ -24,7 +25,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 2
     region: content
   field_course_end_date:
     type: datetime_default
@@ -33,23 +34,25 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_course_enrollments:
-    type: entity_reference_revisions_entity_view
+    type: entity_reference_table
     label: above
     settings:
       view_mode: default
-      link: ''
+      show_entity_label: false
+      empty_cell_value: ''
+      hide_header: '0'
     third_party_settings: {  }
-    weight: 106
+    weight: 6
     region: content
   field_course_location:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_course_start_date:
     type: datetime_default
@@ -58,12 +61,19 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 104
+    weight: 4
+    region: content
+  field_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
 hidden:
   langcode: true

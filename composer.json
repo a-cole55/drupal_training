@@ -23,6 +23,8 @@
         "drupal/back_to_top": "^3.0",
         "drupal/backup_migrate": "^5.0",
         "drupal/bartik": "^1.0",
+        "drupal/bootstrap_library": "^2.0",
+        "drupal/bootstrap_paragraphs": "^5.0",
         "drupal/colorbox": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "10.1.0",
@@ -40,6 +42,7 @@
         "drupal/masquerade": "^2.0@RC",
         "drupal/paragraphs": "^1.17",
         "drupal/pathauto": "^1.11",
+        "drupal/reference_table_formatter": "^1.2",
         "drupal/replicate": "^1.2",
         "drupal/replicate_ui": "^1.1",
         "drupal/search404": "^2.1",
@@ -50,6 +53,7 @@
         "drupal/taxonomy_unique": "^2.5",
         "drupal/vani": "^10.0",
         "drupal/video_embed_field": "^2.5",
+        "drupal/viewsreference": "^2.0@beta",
         "drush/drush": "^11.0"
     },
     "conflict": {

@@ -1,0 +1,118 @@
+settings:
+  allowed_values:
+    -
+      label: 'Markenfarbe - primär'
+    -
+      label: 'Markenfarbe - sekundär'
+    -
+      label: 'Markenfarbe - erfolgreich'
+    -
+      label: 'Markenfarbe - Information'
+    -
+      label: 'Markenfarbe - Warnung'
+    -
+      label: 'Markenfarbe - Gefahr'
+    -
+      label: 'Schwarz - schwach'
+    -
+      label: 'Schwarz - hell'
+    -
+      label: 'Schwarz - kräftig'
+    -
+      label: 'Blau - schwach'
+    -
+      label: 'Blau - hell'
+    -
+      label: 'Blau - kräftig'
+    -
+      label: 'Blaugrau - schwach'
+    -
+      label: 'Blaugrau - hell'
+    -
+      label: 'Blaugrau - kräftig'
+    -
+      label: 'Braun - schwach'
+    -
+      label: 'Braun - hell'
+    -
+      label: 'Braun - kräftig'
+    -
+      label: 'Zyan - schwach'
+    -
+      label: 'Zyan - hell'
+    -
+      label: 'Zyan - kräftig'
+    -
+      label: 'Grün - schwach'
+    -
+      label: 'Grün - hell'
+    -
+      label: 'Grün - kräftig'
+    -
+      label: 'Grau - schwach'
+    -
+      label: 'Grau - hell'
+    -
+      label: 'Grau - kräftig'
+    -
+      label: 'Indigoblau - schwach'
+    -
+      label: 'Indigoblau - hell'
+    -
+      label: 'Indigoblau - kräftig'
+    -
+      label: 'Hellgrün - schwach'
+    -
+      label: 'Hellgrün - hell'
+    -
+      label: 'Hellgrün - kräftig'
+    -
+      label: 'Orange - schwach'
+    -
+      label: 'Orange - hell'
+    -
+      label: 'Orange - dunkel'
+    -
+      label: 'Rosa - schwach'
+    -
+      label: 'Rosa - hell'
+    -
+      label: 'Rosa - kräftig'
+    -
+      label: 'Lila - schwach'
+    -
+      label: 'Lila - hell'
+    -
+      label: 'Lila - kräftig'
+    -
+      label: 'Rot - schwach'
+    -
+      label: 'Rot - hell'
+    -
+      label: 'Rot - kräftig'
+    -
+      label: 'Stilistisch - schwach'
+    -
+      label: 'Stilistisch - hell'
+    -
+      label: 'Stilistisch - kräftig'
+    -
+      label: 'Blaugrün - schwach'
+    -
+      label: 'Blaugrün - hell'
+    -
+      label: 'Aquamarin - kräftig'
+    -
+      label: 'Weiß - schwach'
+    -
+      label: 'Weiß - hell'
+    -
+      label: 'Weiß - kräftig'
+    -
+      label: 'Gelb - schwach'
+    -
+      label: 'Gelb - hell'
+    -
+      label: 'Gelb - kräftig'
+    -
+      label: Transparent

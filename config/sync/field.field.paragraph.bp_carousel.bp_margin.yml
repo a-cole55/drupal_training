@@ -1,0 +1,23 @@
+uuid: b2b206a2-a08f-4bf2-a9fe-caf46697161e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_margin
+    - paragraphs.paragraphs_type.bp_carousel
+  module:
+    - options
+_core:
+  default_config_hash: 5cWWhpKPjx85dW1Q49jOzbwKJ7VYRS1l6kIQKHgowgM
+id: paragraph.bp_carousel.bp_margin
+field_name: bp_margin
+entity_type: paragraph
+bundle: bp_carousel
+label: Margin
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

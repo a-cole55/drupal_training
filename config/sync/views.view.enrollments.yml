@@ -1,27 +1,30 @@
-uuid: 148b55ec-c894-4537-810e-dd90085fa915
+uuid: fd075314-7c39-4b8a-9aff-5cfc1c7b47b0
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.field_course_start_date
     - field.storage.paragraph.field_enrollment_comments
     - field.storage.paragraph.field_enrollment_date
     - field.storage.paragraph.field_enrollment_status
     - field.storage.paragraph.field_enrollment_user
-    - paragraphs.paragraphs_type.enrollment
-    - system.menu.admin
+    - node.type.course
+    - taxonomy.vocabulary.enrollment_status
   module:
     - datetime
     - node
     - paragraphs
+    - taxonomy
     - text
+    - user
 id: enrollments
 label: Enrollments
 module: views
 description: ''
 tag: ''
-base_table: paragraphs_item_field_data
-base_field: id
+base_table: node_field_data
+base_field: nid
 display:
   default:
     id: default
@@ -31,18 +34,18 @@ display:
     display_options:
       title: Enrollments
       fields:
-        id:
-          id: id
-          table: paragraphs_item_field_data
-          field: id
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: null
-          entity_field: id
+          entity_type: node
+          entity_field: title
           plugin_id: field
-          label: ''
-          exclude: true
+          label: Course
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -61,8 +64,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: true
-            ellipsis: true
+            word_boundary: false
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -74,7 +77,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -83,10 +86,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
+          type: string
           settings:
-            thousand_separator: ''
-            prefix_suffix: true
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -101,7 +103,7 @@ display:
           id: field_course_start_date
           table: node__field_course_start_date
           field: field_course_start_date
-          relationship: reverse__node__field_course_enrollments
+          relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -165,7 +167,7 @@ display:
           id: field_enrollment_user
           table: paragraph__field_enrollment_user
           field: field_enrollment_user
-          relationship: none
+          relationship: field_course_enrollments
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -228,7 +230,7 @@ display:
           id: field_enrollment_date
           table: paragraph__field_enrollment_date
           field: field_enrollment_date
-          relationship: none
+          relationship: field_course_enrollments
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -292,7 +294,7 @@ display:
           id: field_enrollment_status
           table: paragraph__field_enrollment_status
           field: field_enrollment_status
-          relationship: none
+          relationship: field_course_enrollments
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -355,7 +357,7 @@ display:
           id: field_enrollment_comments
           table: paragraph__field_enrollment_comments
           field: field_enrollment_comments
-          relationship: none
+          relationship: field_course_enrollments
           group_type: group
           admin_label: ''
           plugin_id: field
@@ -442,33 +444,37 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
       empty: {  }
       sorts:
-        field_enrollment_status_target_id:
-          id: field_enrollment_status_target_id
-          table: paragraph__field_enrollment_status
-          field: field_enrollment_status_target_id
+        created:
+          id: created
+          table: node_field_data
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: standard
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           order: DESC
           expose:
-            label: 'Enrollment status (field_enrollment_status)'
-            field_identifier: field_enrollment_status_target_id
-          exposed: true
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         status:
           id: status
-          table: paragraphs_item_field_data
+          table: node_field_data
           field: status
-          entity_type: paragraph
+          entity_type: node
           entity_field: status
           plugin_id: boolean
           value: '1'
@@ -477,13 +483,62 @@ display:
             operator: ''
         type:
           id: type
-          table: paragraphs_item_field_data
+          table: node_field_data
           field: type
-          entity_type: paragraph
+          entity_type: node
           entity_field: type
           plugin_id: bundle
           value:
-            enrollment: enrollment
+            course: course
+        field_enrollment_status_target_id:
+          id: field_enrollment_status_target_id
+          table: paragraph__field_enrollment_status
+          field: field_enrollment_status_target_id
+          relationship: field_course_enrollments
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_enrollment_status_target_id_op
+            label: 'Enrollment status (field_enrollment_status)'
+            description: ''
+            use_operator: false
+            operator: field_enrollment_status_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_enrollment_status_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: enrollment_status
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: table
         options:
@@ -491,10 +546,10 @@ display:
           row_class: ''
           default_row_class: true
           columns:
-            id: id
+            title: title
           default: '-1'
           info:
-            id:
+            title:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -508,7 +563,9 @@ display:
           caption: ''
           description: ''
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -518,15 +575,14 @@ display:
           replica: false
           query_tags: {  }
       relationships:
-        reverse__node__field_course_enrollments:
-          id: reverse__node__field_course_enrollments
-          table: paragraphs_item_field_data
-          field: reverse__node__field_course_enrollments
+        field_course_enrollments:
+          id: field_course_enrollments
+          table: node__field_course_enrollments
+          field: field_course_enrollments
           relationship: none
           group_type: group
-          admin_label: field_course_enrollments
-          entity_type: paragraph
-          plugin_id: entity_reverse
+          admin_label: 'field_course_enrollments: Paragraph'
+          plugin_id: standard
           required: false
       header: {  }
       footer: {  }
@@ -536,9 +592,11 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_course_start_date'
         - 'config:field.storage.paragraph.field_enrollment_comments'
@@ -554,18 +612,24 @@ display:
       display_extenders: {  }
       path: courses/enrollments
       menu:
-        type: normal
+        type: tab
         title: Enrollments
-        menu_name: admin
-        parent: 'admin_toolbar_tools.extra_links:entity.menu.edit_form.my-menu'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: my-menu
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_course_start_date'
         - 'config:field.storage.paragraph.field_enrollment_comments'

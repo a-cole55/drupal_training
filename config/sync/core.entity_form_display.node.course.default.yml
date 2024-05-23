@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.course.field_course_enrollments
     - field.field.node.course.field_course_location
     - field.field.node.course.field_course_start_date
+    - field.field.node.course.field_title
     - node.type.course
   module:
     - content_moderation
@@ -67,6 +68,14 @@ content:
     weight: 9
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: text_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.course.field_course_enrollments
     - field.field.node.course.field_course_location
     - field.field.node.course.field_course_start_date
+    - field.field.node.course.field_title
     - node.type.course
   module:
     - text
@@ -36,5 +37,6 @@ hidden:
   field_course_enrollments: true
   field_course_location: true
   field_course_start_date: true
+  field_title: true
   langcode: true
   search_api_excerpt: true

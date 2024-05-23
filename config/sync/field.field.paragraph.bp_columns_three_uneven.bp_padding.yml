@@ -1,0 +1,23 @@
+uuid: da03ce3e-fe70-4a9c-bbbd-4db6d748723a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_padding
+    - paragraphs.paragraphs_type.bp_columns_three_uneven
+  module:
+    - options
+_core:
+  default_config_hash: u7MrnycgVOOqU7MlY8qzijWeM4T8Ftimy04CiGxd0gw
+id: paragraph.bp_columns_three_uneven.bp_padding
+field_name: bp_padding
+entity_type: paragraph
+bundle: bp_columns_three_uneven
+label: Padding
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
