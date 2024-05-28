@@ -9,6 +9,7 @@ dependencies:
     - comment
     - contact
     - field_ui
+    - help
     - node
     - path
     - search
@@ -23,6 +24,7 @@ permissions:
   - 'access administration pages'
   - 'access block library'
   - 'access content overview'
+  - 'access help pages'
   - 'access shortcuts'
   - 'access site in maintenance mode'
   - 'access toolbar'

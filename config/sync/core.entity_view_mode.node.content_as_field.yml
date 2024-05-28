@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.content_as_field
 label: 'Content as field'
+description: ''
 targetEntityType: node
 cache: true
