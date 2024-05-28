@@ -1,19 +1,24 @@
+label: Kommentare
 display:
   default:
     display_title: Standard
     display_options:
+      title: Kommentare
       fields:
         comment_bulk_form:
           action_title: Aktion
         subject:
+          label: Betreff
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Autor
           separator: ', '
         entity_id:
           separator: ', '
         changed:
+          label: Aktualisiert
           separator: ', '
         operations:
           label: Aktionen
@@ -32,34 +37,48 @@ display:
             offset_label: Versatz
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
       filters:
+        subject:
+          expose:
+            label: Betreff
         langcode:
           expose:
             label: Sprache
+  page_published:
+    display_options:
+      menu:
+        title: Kommentare
   page_unapproved:
     display_options:
       fields:
         comment_bulk_form:
           action_title: Aktion
         subject:
+          label: Betreff
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Autor
           separator: ', '
         entity_id:
           separator: ', '
         changed:
+          label: Aktualisiert
           separator: ', '
         operations:
           label: Aktionen
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Betreff
         langcode:
           expose:
             label: Sprache

@@ -1,19 +1,24 @@
+label: Commentaires
 display:
   default:
     display_title: 'Par défaut'
     display_options:
+      title: Commentaires
       fields:
         comment_bulk_form:
           action_title: Action
         subject:
+          label: Objet
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Auteur
           separator: ', '
         entity_id:
           separator: ', '
         changed:
+          label: 'Mis à jour'
           separator: ', '
         operations:
           label: Actions
@@ -32,34 +37,48 @@ display:
             offset_label: Décalage
       exposed_form:
         options:
+          submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
       filters:
+        subject:
+          expose:
+            label: Objet
         langcode:
           expose:
             label: Langue
+  page_published:
+    display_options:
+      menu:
+        title: Commentaires
   page_unapproved:
     display_options:
       fields:
         comment_bulk_form:
           action_title: Action
         subject:
+          label: Objet
           separator: ', '
         uid:
           separator: ', '
         name:
+          label: Auteur
           separator: ', '
         entity_id:
           separator: ', '
         changed:
+          label: 'Mis à jour'
           separator: ', '
         operations:
           label: Actions
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Objet
         langcode:
           expose:
             label: Langue

@@ -7,6 +7,8 @@ display:
           tags:
             next: 'Nächste Seite ›'
             previous: '‹ Vorherige Seite'
+            first: '« Anfang'
+            last: 'Ende »'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'

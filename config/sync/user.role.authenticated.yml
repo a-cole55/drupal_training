@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.comments
     - filter.format.restricted_html
+    - filter.format.webform_default
     - node.type.forum
   module:
     - comment
@@ -39,6 +40,7 @@ permissions:
   - 'use text format basic_html'
   - 'use text format comments'
   - 'use text format restricted_html'
+  - 'use text format webform_default'
   - 'view media'
   - 'view paragraph content from_library'
   - 'view paragraph content image_text'

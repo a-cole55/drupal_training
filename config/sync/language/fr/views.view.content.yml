@@ -1,17 +1,24 @@
+label: Contenu
 display:
   default:
     display_title: 'Par défaut'
     display_options:
+      title: Contenu
       fields:
         title:
           label: Titre
         type:
+          label: 'Type de contenu'
           separator: ', '
+        name:
+          label: Auteur
         status:
           label: État
           settings:
             format_custom_false: 'Non publié'
             format_custom_true: Publié
+        changed:
+          label: 'Mis à jour'
         operations:
           label: Actions
       pager:
@@ -19,8 +26,11 @@ display:
           tags:
             next: 'Suivant ›'
             previous: '‹ Précédent'
+            first: '« Premier'
+            last: 'Dernier »'
       exposed_form:
         options:
+          submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
@@ -29,6 +39,9 @@ display:
         title:
           expose:
             label: Titre
+        type:
+          expose:
+            label: 'Type de contenu'
         status:
           expose:
             label: État
@@ -43,3 +56,8 @@ display:
             label: Langue
   page_1:
     display_title: Page
+    display_options:
+      menu:
+        title: Contenu
+      tab_options:
+        title: Contenu

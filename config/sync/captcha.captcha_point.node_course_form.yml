@@ -1,0 +1,7 @@
+uuid: 39ae852d-f23a-4b71-83c6-d74223228bd7
+langcode: en
+status: false
+dependencies: {  }
+formId: node_course_form
+captchaType: default
+label: node_course_form

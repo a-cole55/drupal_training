@@ -4,6 +4,7 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
@@ -14,7 +15,12 @@ display:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
             offset_label: Décalage
+          tags:
+            previous: ‹‹
+            next: ››
       fields:
+        entity_browser_select:
+          label: Sélectionner
         label:
           label: Libellé
           separator: ', '

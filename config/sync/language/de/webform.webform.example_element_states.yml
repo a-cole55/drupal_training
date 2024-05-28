@@ -1,0 +1,180 @@
+title: 'Beispiel: Elemente: Bedingungslogik'
+description: 'Beispiele für Elemente mit bedingter Logik.'
+categories:
+  - Beispiel
+elements: |
+  checkbox_example:
+    '#type': details
+    '#title': 'Beispiel für Kontrollkästchen'
+    '#open': true
+    checkbox:
+      '#type': checkbox
+      '#title': 'Bitte kreuzen Sie dieses Kontrollkästchen an:
+      '#type': textarea
+      '#title': 'Bitte erklären Sie, warum Sie das Kontrollkästchen oben angekreuzt haben'
+      '#states':
+        visible:
+          ':input[name="checkbox"]':
+            checked: true
+        required:
+          ':input[name="checkbox"]':
+            checked: true
+  checkboxes_example:
+    '#type': details
+    '#title': 'Beispiel für Kontrollkästchen'
+    '#open': true
+    checkboxes:
+      '#type': checkboxes
+      '#title': 'Bitte alle ankreuzen'
+      '#options':
+        one: ein
+        two: zwei
+    checkboxes_explain:
+      '#type': textarea
+      '#title': 'Bitte erklären Sie, warum Sie oben alle Kontrollkästchen angekreuzt haben'
+      '#states':
+        visible:
+          ':input[name="checkboxes[one]"]':
+            checked: true
+          ':input[name="checkboxes[two]"]':
+            checked: true
+        required:
+          ':input[name="checkboxes[one]"]':
+            checked: true
+          ':input[name="checkboxes[two]"]':
+            checked: true
+  select_example:
+    '#type': details
+    '#title': 'Beispielauswahl „andere“'
+    '#open': true
+    select:
+      '#type': select
+      '#title': 'Wählen Sie im Auswahlmenü unten bitte „Andere“ aus.'
+      '#options':
+        1: Eins
+        2: Zwei
+        3: Drei
+        other: Andere…
+    select_other:
+      '#type': textfield
+      '#attributes':
+        placeholder: 'Andere auswählen…'
+      '#states':
+        visible:
+          ':input[name="select"]':
+            value: other
+        required:
+          ':input[name="select"]':
+            value: other
+  select_multiple_example:
+    '#type': details
+    '#title': 'Beispiel Mehrfachauswahl'
+    '#open': true
+    select_multiple:
+      '#type': select
+      '#title': 'Bitte wählen Sie im Auswahlmenü unten „Eins“ oder „Zwei“.'
+      '#options':
+        1: Eins
+        2: Zwei
+        3: Drei
+        4: Vier
+    select_multiple_other:
+      '#type': textfield
+      '#attributes':
+        placeholder: 'Andere auswählen…'
+      '#states':
+        visible:
+          - ':input[name="select_multiple"]':
+              - value: 1
+          - oder
+          - ':input[name="select_multiple"]':
+              - value: 2
+        required:
+          - ':input[name="select_multiple"]':
+              - value: 1
+          - oder
+          - ':input[name="select_multiple"]':
+              - value: 2
+  radios_example:
+    '#type': details
+    '#title': 'Beispiel Optionsfelder mit „andere“'
+    '#open': true
+    radios:
+      '#type': radios
+      '#title': 'Wählen Sie bitte „Andere“ in den Optionsfeldern unten.'
+      '#options':
+        1: Eins
+        2: Zwei
+        3: Drei
+        other: Andere…
+    radios_other:
+      '#type': textfield
+      '#attributes':
+        placeholder: 'Andere auswählen…'
+      '#states':
+        visible:
+          ':input[name="radios"]':
+            value: other
+        required:
+          ':input[name="radios"]':
+            value: other
+  checkbox_more_example:
+    '#type': details
+    '#title': 'Beispiel Kontrollkästchen mit mehr Info'
+    '#open': true
+    checkbox_more:
+      '#type': checkbox
+      '#title': 'Markieren Sie bitte dieses Kästchen, um weitere Infos einzugeben'
+    checkbox_more_details:
+      '#type': details
+      '#title': 'Weitere Infos'
+      '#open': true
+      '#states':
+        expanded:
+          ':input[name="checkbox_more"]':
+            checked: true
+      checkbox_more_first_name:
+        '#type': textfield
+        '#title': 'Vorname'
+        '#states':
+          required:
+            ':input[name="checkbox_more"]':
+              checked: true
+      checkbox_more_last_name:
+        '#type': textfield
+        '#title': 'Nachname'
+        '#states':
+          required:
+            ':input[name="checkbox_more"]':
+              checked: true
+  filled_example:
+    '#type': details
+    '#title': 'Beispiel Textfeld ausgefüllt'
+    '#open': true
+    filled:
+      '#type': textfield
+      '#title': 'Füllen Sie das Textfeld unten aus, um das nächste Textfeld zu aktivieren und anzufordern.'
+    filled_next:
+      '#type': textfield
+      '#title': 'Das nächste Textfeld'
+      '#states':
+        enabled:
+          ':input[name="filled"]':
+            filled: true
+        required:
+          ':input[name="filled"]':
+            filled: true
+  readonly_example:
+    '#type': details
+    '#title': 'Beispiel Textfeld schreibgeschützt'
+    '#open': true
+    readonly_checkbox:
+      '#type': checkbox
+      '#title': 'Markieren Sie bitte dieses Kästchen, um das Textfeld unten schreibzuschützen'
+    readonly_textfield:
+      '#type': textfield
+      '#title': ‚Textfeld Feld'
+      '#states':
+        readonly:
+          ':input[name="readonly_checkbox"]':
+            checked: true

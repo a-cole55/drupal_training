@@ -1,0 +1,26 @@
+uuid: b5587f1b-115b-460a-a966-6c75ec00002f
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.contact_us
+  module:
+    - webform
+  theme:
+    - forcontu_bartik
+id: formularioweb
+theme: forcontu_bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Contact Us'
+  label_display: visible
+  provider: webform
+  webform_id: contact_us
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }

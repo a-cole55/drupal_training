@@ -12,3 +12,4 @@ display:
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
+      use_more_text: Weitere

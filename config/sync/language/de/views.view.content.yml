@@ -1,17 +1,24 @@
+label: Inhalt
 display:
   default:
     display_title: Standard
     display_options:
+      title: Inhalt
       fields:
         title:
           label: Titel
         type:
+          label: Inhaltstyp
           separator: ', '
+        name:
+          label: Autor
         status:
           label: Status
           settings:
             format_custom_false: 'Nicht veröffentlicht'
             format_custom_true: Veröffentlicht
+        changed:
+          label: Aktualisiert
         operations:
           label: Aktionen
       pager:
@@ -19,8 +26,11 @@ display:
           tags:
             next: 'Nächste Seite ›'
             previous: '‹ Vorherige Seite'
+            first: '« Anfang'
+            last: 'Ende »'
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -29,6 +39,9 @@ display:
         title:
           expose:
             label: Titel
+        type:
+          expose:
+            label: Inhaltstyp
         status:
           expose:
             label: Status
@@ -43,3 +56,8 @@ display:
             label: Sprache
   page_1:
     display_title: Seite
+    display_options:
+      menu:
+        title: Inhalt
+      tab_options:
+        title: Inhalt

@@ -1,0 +1,7 @@
+uuid: 1c449da7-b850-40c6-8a50-a42bbef348ae
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_us
+captchaType: recaptcha/reCAPTCHA
+label: contact_us

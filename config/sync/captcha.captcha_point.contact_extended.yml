@@ -1,0 +1,7 @@
+uuid: 1870a960-af4b-4a6a-8988-ed2fad020f77
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_extended
+captchaType: recaptcha/reCAPTCHA
+label: contact_extended

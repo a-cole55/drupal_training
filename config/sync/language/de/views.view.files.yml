@@ -8,8 +8,12 @@ display:
         filename:
           label: Name
           separator: ', '
+        filesize:
+          label: Größe
         status:
           label: Status
+        changed:
+          label: Änderungsdatum
         count:
           label: 'Verwendet in'
         operations:
@@ -25,6 +29,7 @@ display:
             offset_label: Versatz
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend

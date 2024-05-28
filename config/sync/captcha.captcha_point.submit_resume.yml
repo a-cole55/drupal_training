@@ -1,0 +1,7 @@
+uuid: 68c7b661-8da3-4464-b292-dcc71950deb6
+langcode: en
+status: true
+dependencies: {  }
+formId: submit_resume
+captchaType: recaptcha/reCAPTCHA
+label: submit_resume
