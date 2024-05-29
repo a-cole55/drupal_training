@@ -20,7 +20,14 @@ dependencies:
     - field.field.node.publication.field_related_news
     - node.type.publication
   module:
+    - field_layout
+    - layout_discovery
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.publication.content_as_field
 targetEntityType: node
 bundle: publication
@@ -43,3 +50,4 @@ hidden:
   field_related_news: true
   langcode: true
   links: true
+  search_api_excerpt: true

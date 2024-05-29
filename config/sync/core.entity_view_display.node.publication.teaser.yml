@@ -21,9 +21,16 @@ dependencies:
     - image.style.cover_publication_teaser
     - node.type.publication
   module:
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.publication.teaser
 targetEntityType: node
 bundle: publication
@@ -74,3 +81,4 @@ hidden:
   field_publication_sample_chapter: true
   field_related_news: true
   langcode: true
+  search_api_excerpt: true

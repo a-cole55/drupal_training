@@ -7,8 +7,15 @@ dependencies:
     - field.field.paragraph.text_image.field_text_demo
     - paragraphs.paragraphs_type.text_image
   module:
+    - field_layout
     - image
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: GVCU1OMBWMYorodU_tnOIc-IuwX3kWOtK4H7OnjAX94
 id: paragraph.text_image.default
@@ -18,19 +25,19 @@ mode: default
 content:
   field_image_demo:
     type: image
-    weight: 1
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
     label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_text_demo:
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    label: hidden
+    weight: 0
     region: content
 hidden:
   created: true

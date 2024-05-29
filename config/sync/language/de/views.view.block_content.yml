@@ -29,3 +29,6 @@ display:
           sort_desc_label: Absteigend
   page_1:
     display_title: Seite
+    display_options:
+      menu:
+        title: Blöcke

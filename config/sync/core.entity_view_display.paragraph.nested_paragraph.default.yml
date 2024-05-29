@@ -7,6 +7,13 @@ dependencies:
     - paragraphs.paragraphs_type.nested_paragraph
   module:
     - entity_reference_revisions
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: VwQ43rfoFoQwqTEQIx9eK41wlMFzh5c7fKze-Rk06SM
 id: paragraph.nested_paragraph.default
@@ -15,13 +22,13 @@ bundle: nested_paragraph
 mode: default
 content:
   field_paragraphs_demo:
-    weight: 0
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 0
     region: content
 hidden:
   created: true

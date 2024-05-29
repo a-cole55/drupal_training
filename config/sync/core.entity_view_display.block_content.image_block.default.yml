@@ -9,9 +9,16 @@ dependencies:
     - field.field.block_content.image_block.field_block_link
     - image.style.medium
   module:
+    - field_layout
     - image
+    - layout_discovery
     - link
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: block_content.image_block.default
 targetEntityType: block_content
 bundle: image_block
@@ -49,3 +56,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

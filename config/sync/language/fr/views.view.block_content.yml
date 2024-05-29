@@ -29,3 +29,6 @@ display:
           sort_desc_label: Desc
   page_1:
     display_title: Page
+    display_options:
+      menu:
+        title: Blocs

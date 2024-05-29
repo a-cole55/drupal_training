@@ -1,0 +1,7 @@
+uuid: c1134d03-12dc-4655-b0ec-98634bcc12a6
+langcode: en
+status: true
+dependencies: {  }
+formId: captcha_point_edit_form
+captchaType: recaptcha/reCAPTCHA
+label: captcha_point_edit_form

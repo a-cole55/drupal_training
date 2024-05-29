@@ -12,6 +12,8 @@ dependencies:
     - paragraphs.paragraphs_type.bp_blank
   module:
     - field_group
+    - field_layout
+    - layout_discovery
     - text
 third_party_settings:
   field_group:
@@ -33,6 +35,10 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: wSCVhG2C5J5BpveZe5r3RgdTjUaN041RFTc8gbMyjGM
 id: paragraph.bp_blank.default

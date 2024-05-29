@@ -9,6 +9,8 @@ dependencies:
     - paragraphs.paragraphs_type.bp_column_wrapper
   module:
     - field_group
+    - field_layout
+    - layout_discovery
     - paragraphs
 third_party_settings:
   field_group:
@@ -28,6 +30,10 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: zXgAVdQLYTF_MQbWFqJCX0xRx0uK5nWf8Cq7DCzi0lI
 id: paragraph.bp_column_wrapper.default

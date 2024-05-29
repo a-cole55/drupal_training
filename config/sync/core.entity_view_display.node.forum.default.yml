@@ -10,8 +10,15 @@ dependencies:
     - node.type.forum
   module:
     - comment
+    - field_layout
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: ipzVP57UiuSE3ixt_lV1XzR2l-hqw_tGClp8eHN7zbw
 id: node.forum.default
@@ -48,3 +55,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

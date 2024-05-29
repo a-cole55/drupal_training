@@ -25,10 +25,9 @@ module:
   contact: 0
   content_moderation: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
-  devel: 0
-  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   editor_advanced_link: 0
@@ -38,6 +37,7 @@ module:
   entity_usage: 0
   field: 0
   field_group: 0
+  field_layout: 0
   field_ui: 0
   file: 0
   file_mdm: 0
@@ -52,9 +52,13 @@ module:
   image: 0
   image_captcha: 0
   image_effects: 0
+  inline_form_errors: 0
   jquery_ui: 0
+  jquery_ui_draggable: 0
+  jquery_ui_droppable: 0
   jquery_ui_effects: 0
   language: 0
+  layout_discovery: 0
   link: 0
   locale: 0
   mask: 0
@@ -66,6 +70,10 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
+  panels: 0
+  panels_ipe: 0
   paragraphs_demo: 0
   paragraphs_library: 0
   paragraphs_type_permissions: 0
@@ -80,6 +88,7 @@ module:
   search404: 0
   search_api: 0
   search_api_db: 0
+  settings_tray: 0
   shortcut: 0
   statistics: 0
   system: 0
@@ -97,7 +106,6 @@ module:
   views_ui: 0
   viewsreference: 0
   webform: 0
-  webform_devel: 0
   webform_examples: 0
   webform_node: 0
   webform_templates: 0

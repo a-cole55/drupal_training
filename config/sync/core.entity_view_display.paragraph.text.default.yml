@@ -6,7 +6,14 @@ dependencies:
     - field.field.paragraph.text.field_text_demo
     - paragraphs.paragraphs_type.text
   module:
+    - field_layout
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: kyCEhGxyRmMibYB56zAOSPCf0TkEkMEPOHLFsFZmf4c
 id: paragraph.text.default
@@ -16,10 +23,10 @@ mode: default
 content:
   field_text_demo:
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    label: hidden
+    weight: 0
     region: content
 hidden:
   created: true

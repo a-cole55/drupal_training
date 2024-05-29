@@ -1,6 +1,6 @@
 uuid: cbc98b4d-704c-4ae2-b727-4ba90457d9fd
 langcode: en
-status: closed
+status: open
 dependencies:
   module:
     - honeypot
@@ -11,7 +11,7 @@ weight: 0
 open: null
 close: null
 uid: 1
-template: true
+template: false
 archive: false
 id: contact_us
 title: 'Contact us'
@@ -30,6 +30,10 @@ elements: |-
   comments:
     '#type': textarea
     '#title': Comments
+  captcha:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
+    '#captcha_admin_mode': true
 css: ''
 javascript: ''
 settings:
@@ -42,7 +46,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''

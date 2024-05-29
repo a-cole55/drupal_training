@@ -14,9 +14,16 @@ dependencies:
     - image.style.thumbnail
     - node.type.news
   module:
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.news.teaser
 targetEntityType: node
 bundle: news
@@ -59,3 +66,4 @@ hidden:
   field_news_section: true
   field_news_video: true
   langcode: true
+  search_api_excerpt: true

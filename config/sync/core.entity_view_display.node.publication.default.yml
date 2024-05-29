@@ -20,11 +20,18 @@ dependencies:
     - node.type.publication
   module:
     - datetime
+    - field_layout
     - file
     - image
+    - layout_discovery
     - options
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.publication.default
 targetEntityType: node
 bundle: publication
@@ -156,3 +163,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

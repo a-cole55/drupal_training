@@ -21,9 +21,16 @@ dependencies:
     - node.type.publication
   module:
     - datetime
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.publication.rss
 targetEntityType: node
 bundle: publication
@@ -88,3 +95,4 @@ hidden:
   field_publication_sample_chapter: true
   field_related_news: true
   langcode: true
+  search_api_excerpt: true

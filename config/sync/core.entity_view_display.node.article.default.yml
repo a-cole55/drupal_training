@@ -12,9 +12,16 @@ dependencies:
     - node.type.article
   module:
     - comment
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_twocol_bricks
+    settings:
+      label: ''
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
 id: node.article.default
@@ -27,8 +34,8 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
+    weight: 3
+    region: middle
   comment:
     type: comment_default
     label: above
@@ -36,8 +43,8 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 110
-    region: content
+    weight: 4
+    region: first_below
   field_image:
     type: image
     label: hidden
@@ -47,20 +54,21 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: -1
-    region: content
+    weight: 2
+    region: first_above
   field_tags:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
-    region: content
+    weight: 0
+    region: top
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
+    weight: 1
+    region: top
 hidden:
   langcode: true
+  search_api_excerpt: true

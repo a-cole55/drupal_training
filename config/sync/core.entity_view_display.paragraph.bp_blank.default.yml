@@ -11,8 +11,15 @@ dependencies:
     - field.field.paragraph.bp_blank.bp_width
     - paragraphs.paragraphs_type.bp_blank
   module:
+    - field_layout
+    - layout_discovery
     - options
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: Z99UjTq-DpbVEJtENLsSnY8Pis2OI-eT_22NfVVDLb8
 id: paragraph.bp_blank.default
@@ -21,20 +28,20 @@ bundle: bp_blank
 mode: default
 content:
   bp_background:
-    weight: 0
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 0
     region: content
   bp_header:
     type: string
-    weight: 2
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   bp_margin:
     type: list_key
     label: hidden
@@ -50,18 +57,18 @@ content:
     weight: 8
     region: content
   bp_unrestricted:
-    weight: 3
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
   bp_width:
-    weight: 1
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 1
     region: content
 hidden:
   created: true

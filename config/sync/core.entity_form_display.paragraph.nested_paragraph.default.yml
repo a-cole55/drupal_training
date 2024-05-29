@@ -6,7 +6,14 @@ dependencies:
     - field.field.paragraph.nested_paragraph.field_paragraphs_demo
     - paragraphs.paragraphs_type.nested_paragraph
   module:
+    - field_layout
+    - layout_discovery
     - paragraphs
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: koYYwlW52xb05AiGtIbUHVvueeTQi6lKOx4z8s2umt0
 id: paragraph.nested_paragraph.default

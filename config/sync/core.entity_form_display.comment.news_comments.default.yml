@@ -7,7 +7,14 @@ dependencies:
     - field.field.comment.news_comments.comment_body
     - field.field.comment.news_comments.field_news_like
   module:
+    - field_layout
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: comment.news_comments.default
 targetEntityType: comment
 bundle: news_comments

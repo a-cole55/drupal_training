@@ -1,0 +1,7 @@
+uuid: 71d73700-4db8-47e2-bf90-e107aa73ae50
+langcode: en
+status: true
+dependencies: {  }
+formId: webform_edit_form
+captchaType: recaptcha/reCAPTCHA
+label: webform_edit_form

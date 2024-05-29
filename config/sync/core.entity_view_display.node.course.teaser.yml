@@ -12,8 +12,15 @@ dependencies:
     - field.field.node.course.field_title
     - node.type.course
   module:
+    - field_layout
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.course.teaser
 targetEntityType: node
 bundle: course

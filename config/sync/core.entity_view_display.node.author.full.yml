@@ -13,9 +13,16 @@ dependencies:
     - node.type.author
   module:
     - datetime
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.author.full
 targetEntityType: node
 bundle: author
@@ -64,3 +71,4 @@ content:
 hidden:
   field_author_highlighted: true
   langcode: true
+  search_api_excerpt: true

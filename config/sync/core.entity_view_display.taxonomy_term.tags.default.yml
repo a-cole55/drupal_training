@@ -5,7 +5,14 @@ dependencies:
   config:
     - taxonomy.vocabulary.tags
   module:
+    - field_layout
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: taxonomy_term.tags.default
 targetEntityType: taxonomy_term
 bundle: tags
@@ -20,3 +27,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

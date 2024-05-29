@@ -137,6 +137,10 @@ elements: |-
         'Project Management': 'Project Management'
         Administration: Administration
         Drupal: Drupal
+  captcha:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
+    '#captcha_admin_mode': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -260,7 +264,7 @@ settings:
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
-  limit_user: 1
+  limit_user: 3
   limit_user_interval: null
   limit_user_message: ''
   limit_user_unique: false
@@ -280,6 +284,7 @@ settings:
 access:
   create:
     roles:
+      - anonymous
       - authenticated
     users: {  }
     permissions: {  }

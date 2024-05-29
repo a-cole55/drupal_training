@@ -15,6 +15,8 @@ dependencies:
     - paragraphs.paragraphs_type.bp_modal
   module:
     - field_group
+    - field_layout
+    - layout_discovery
     - paragraphs
 third_party_settings:
   field_group:
@@ -36,6 +38,10 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: zzUWvqo9eG1wPBxkzJXE_86o25spjrrsLMA_P7q-s-k
 id: paragraph.bp_modal.default

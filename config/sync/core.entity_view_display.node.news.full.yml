@@ -16,10 +16,17 @@ dependencies:
     - node.type.news
   module:
     - comment
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
     - video_embed_field
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.news.full
 targetEntityType: node
 bundle: news
@@ -93,3 +100,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

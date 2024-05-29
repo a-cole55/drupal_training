@@ -37,6 +37,9 @@ elements: |-
   comments:
     '#type': textarea
     '#title': Comments
+  captcha:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
 css: ''
 javascript: ''
 settings:

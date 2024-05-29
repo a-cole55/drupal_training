@@ -7,7 +7,14 @@ dependencies:
     - image.style.medium
     - paragraphs.paragraphs_type.images
   module:
+    - field_layout
     - image
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: SrcUVnFWa_fwHjrESiGfJISl0JVktNYE7j3YSPRGybY
 id: paragraph.images.default
@@ -17,12 +24,12 @@ mode: default
 content:
   field_images_demo:
     type: image
-    weight: 0
-    settings:
-      image_style: medium
-      image_link: file
-    third_party_settings: {  }
     label: hidden
+    settings:
+      image_link: file
+      image_style: medium
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true

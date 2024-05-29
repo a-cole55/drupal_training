@@ -6,6 +6,13 @@ dependencies:
     - core.entity_view_mode.aggregator_item.summary
   module:
     - aggregator
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: ei8DNHu3HVLFFuKrr2Y4MsxuHR8ZMt0kHQly-qfkTAU
 id: aggregator_item.aggregator_item.summary
@@ -22,3 +29,4 @@ hidden:
   feed: true
   langcode: true
   link: true
+  search_api_excerpt: true

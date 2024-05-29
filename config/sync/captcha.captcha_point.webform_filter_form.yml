@@ -1,0 +1,7 @@
+uuid: 6a6e043d-1676-4275-8206-5f13d2e55b80
+langcode: en
+status: true
+dependencies: {  }
+formId: webform_filter_form
+captchaType: recaptcha/reCAPTCHA
+label: webform_filter_form

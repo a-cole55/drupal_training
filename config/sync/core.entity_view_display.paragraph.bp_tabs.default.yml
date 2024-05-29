@@ -12,7 +12,14 @@ dependencies:
     - paragraphs.paragraphs_type.bp_tabs
   module:
     - entity_reference_revisions
+    - field_layout
+    - layout_discovery
     - options
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: 4bzdqiSw4yftUaF4bLi06mORppxMahyIoU668f8W9yg
 id: paragraph.bp_tabs.default
@@ -21,20 +28,20 @@ bundle: bp_tabs
 mode: default
 content:
   bp_background:
-    weight: 0
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 0
     region: content
   bp_header:
     type: string
-    weight: 2
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   bp_margin:
     type: list_key
     label: hidden
@@ -51,19 +58,19 @@ content:
     region: content
   bp_tab_section:
     type: entity_reference_revisions_entity_view
-    weight: 3
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 3
     region: content
   bp_width:
-    weight: 1
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 1
     region: content
 hidden:
   created: true

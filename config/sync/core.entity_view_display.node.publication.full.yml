@@ -24,7 +24,9 @@ dependencies:
     - colorbox
     - datetime
     - field_group
+    - field_layout
     - file
+    - layout_discovery
     - options
     - text
     - user
@@ -73,6 +75,10 @@ third_party_settings:
         show_empty_fields: false
         id: ''
         description: ''
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.publication.full
 targetEntityType: node
 bundle: publication
@@ -190,3 +196,4 @@ hidden:
   field_photo: true
   field_publication_sales: true
   langcode: true
+  search_api_excerpt: true

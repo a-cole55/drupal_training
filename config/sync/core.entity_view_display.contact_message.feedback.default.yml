@@ -6,7 +6,14 @@ dependencies:
     - contact.form.feedback
     - field.field.contact_message.feedback.field_contact_request_type
   module:
+    - field_layout
+    - layout_discovery
     - options
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: contact_message.feedback.default
 targetEntityType: contact_message
 bundle: feedback
@@ -29,3 +36,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

@@ -6,8 +6,16 @@ dependencies:
     - field.field.node.paragraphed_content_demo.field_paragraphs_demo
     - node.type.paragraphed_content_demo
   module:
+    - content_moderation
+    - field_layout
+    - layout_discovery
     - paragraphs
     - path
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: zsT8PI1J4XBEdiaZ7z_9_1vApOwQHtFbjmRaLJGvFL8
 id: node.paragraphed_content_demo.default
@@ -49,6 +57,12 @@ content:
   langcode:
     type: language_select
     weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }

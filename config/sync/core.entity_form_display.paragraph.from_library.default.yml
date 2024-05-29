@@ -8,6 +8,13 @@ dependencies:
     - paragraphs.paragraphs_type.from_library
   module:
     - entity_browser
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: Bea-FFbHlBuiYLW8Et0hLK6VNECewxpIchDbOtC7IDo
 id: paragraph.from_library.default

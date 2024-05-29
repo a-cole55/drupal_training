@@ -7,7 +7,14 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.images
   module:
+    - field_layout
     - image
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: TA7u8Bk8lE1ziJY1nxAwbr-W66WoS8s0k0bLSMKCZfc
 id: paragraph.images.default
@@ -16,18 +23,18 @@ bundle: images
 mode: default
 content:
   field_images_demo:
+    type: image_image
     weight: 0
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   status: true

@@ -7,9 +7,16 @@ dependencies:
     - image.style.medium
     - taxonomy.vocabulary.countries
   module:
+    - field_layout
     - image
+    - layout_discovery
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: taxonomy_term.countries.default
 targetEntityType: taxonomy_term
 bundle: countries

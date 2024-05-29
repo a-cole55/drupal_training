@@ -11,9 +11,16 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - field_layout
     - image
+    - layout_discovery
     - options
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
 id: user.user.default
@@ -59,6 +66,11 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  masquerade:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 50
+    region: content
   member_for:
     settings: {  }
     third_party_settings: {  }
@@ -77,3 +89,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

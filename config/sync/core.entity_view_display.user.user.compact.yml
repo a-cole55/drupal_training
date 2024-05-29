@@ -12,8 +12,15 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - field_layout
     - image
+    - layout_discovery
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: 00zr_RBdTjPjBGITD3h4c1ESQZimjdVCcHGt1trLqIY
 id: user.user.compact
@@ -21,6 +28,11 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
+  masquerade:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 50
+    region: content
   user_picture:
     type: image
     label: hidden
@@ -40,3 +52,4 @@ hidden:
   field_user_zip_code: true
   langcode: true
   member_for: true
+  search_api_excerpt: true

@@ -12,9 +12,16 @@ dependencies:
     - image.style.photo_author_teaser
     - node.type.author
   module:
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: node.author.content_as_field
 targetEntityType: node
 bundle: author
@@ -49,3 +56,4 @@ hidden:
   field_author_country: true
   field_author_highlighted: true
   langcode: true
+  search_api_excerpt: true

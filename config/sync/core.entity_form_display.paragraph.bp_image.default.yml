@@ -14,7 +14,9 @@ dependencies:
     - paragraphs.paragraphs_type.bp_image
   module:
     - field_group
+    - field_layout
     - image
+    - layout_discovery
     - link
 third_party_settings:
   field_group:
@@ -36,6 +38,10 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: 7RY8nmZd8T98ux-4ddUyRXoNFUzukuGeI60BSKUf1g4
 id: paragraph.bp_image.default

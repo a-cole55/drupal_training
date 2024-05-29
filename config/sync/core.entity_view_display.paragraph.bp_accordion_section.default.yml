@@ -9,6 +9,13 @@ dependencies:
     - paragraphs.paragraphs_type.bp_accordion_section
   module:
     - entity_reference_revisions
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: YWoekjQ8sa9OCruOV2rfhZqALSActgOVVQu33v3_gFw
 id: paragraph.bp_accordion_section.default
@@ -18,27 +25,27 @@ mode: default
 content:
   bp_accordion_section_body:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   bp_accordion_section_title:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   bp_show_button:
-    weight: 2
+    type: boolean
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: boolean
+    weight: 2
     region: content
 hidden:
   created: true
