@@ -54,19 +54,19 @@ jobs:
             if [ $? -ne 0 ]; then exit 1; fi
 
             echo 'getting drush status';
-            drush st;
+            vendor/bin/drush st;
             if [ $? -ne 0 ]; then exit 1; fi
 
             echo 'clearing caches';
-            drush cr
+            vendor/bin/drush cr
             if [ $? -ne 0 ]; then exit 1; fi
 
             echo 'updating db';
-            drush updb
+            vendor/bin/drush updb
             if [ $? -ne 0 ]; then exit 1; fi
 
             echo 'importing config';
-            drush cim -y
+            vendor/bin/drush cim -y
             if [ $? -ne 0 ]; then exit 1; fi
 
       - name: Update commit status at the end
