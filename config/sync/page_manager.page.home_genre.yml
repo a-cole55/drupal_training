@@ -1,0 +1,17 @@
+uuid: be616342-b5f7-499a-adf7-e4b1bb4669d6
+langcode: en
+status: true
+dependencies: {  }
+id: home_genre
+label: 'Home genre'
+description: ''
+use_admin_theme: false
+path: '/publications/{genre}/home'
+access_logic: and
+access_conditions: {  }
+parameters:
+  genre:
+    machine_name: genre
+    label: Genre
+    type: 'entity:taxonomy_term'
+    optional: false

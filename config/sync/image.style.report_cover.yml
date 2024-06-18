@@ -1,0 +1,15 @@
+uuid: db904f06-37c4-4f0e-b1d3-613554d90f8c
+langcode: en
+status: true
+dependencies: {  }
+name: report_cover
+label: 'Report Cover'
+effects:
+  ae378cf0-1e3c-4d43-89bc-48a702e8d9ec:
+    uuid: ae378cf0-1e3c-4d43-89bc-48a702e8d9ec
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 200
+      anchor: center-center

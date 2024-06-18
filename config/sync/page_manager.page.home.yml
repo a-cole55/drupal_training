@@ -1,0 +1,12 @@
+uuid: face00f5-c043-4697-8d44-274ad42929f0
+langcode: en
+status: true
+dependencies: {  }
+id: home
+label: Home
+description: ''
+use_admin_theme: false
+path: /home
+access_logic: and
+access_conditions: {  }
+parameters: {  }
