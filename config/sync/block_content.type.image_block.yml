@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: image_block
 label: 'Image block'
-revision: 1
+revision: true
 description: 'Block for images.'

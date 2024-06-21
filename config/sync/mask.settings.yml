@@ -1,5 +1,6 @@
 _core:
   default_config_hash: UAFeZSZzOJR59C4HdYtIVctXen9PKGq1NpClqRJbbT4
+langcode: en
 use_cdn: true
 plugin_path: ''
 translation:

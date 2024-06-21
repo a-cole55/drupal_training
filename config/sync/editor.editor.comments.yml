@@ -14,4 +14,5 @@ settings:
       - bold
       - link
   plugins: {  }
-image_upload: {  }
+image_upload:
+  status: false

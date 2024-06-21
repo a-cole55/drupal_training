@@ -1,5 +1,6 @@
 _core:
   default_config_hash: 2r-Hwv0M1XV4-Kzc-yfPvdvaeEkrFR3xvEhYGlusdHM
+langcode: en
 image_captcha_fonts_preview_map_cache:
   3dbed886c81a681a313bc6297f53db5699401194490d38621f05c7bdf06cf1f5:
     uri: modules/contrib/captcha/modules/image_captcha/fonts/Tuffy/Tuffy.ttf

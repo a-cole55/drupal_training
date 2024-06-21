@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Publication Genres'
 vid: publication_genres
-description: ''
+description: null
 weight: 0
+new_revision: false
