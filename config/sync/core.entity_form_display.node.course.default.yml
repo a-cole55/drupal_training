@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.course.field_course_enrollments
     - field.field.node.course.field_course_location
     - field.field.node.course.field_course_start_date
+    - field.field.node.course.field_internal_documentation
     - field.field.node.course.field_title
     - node.type.course
   module:
@@ -40,7 +41,7 @@ content:
     third_party_settings: {  }
   field_course_end_date:
     type: datetime_default
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -72,9 +73,19 @@ content:
     third_party_settings: {  }
   field_course_start_date:
     type: datetime_default
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_internal_documentation:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_title:
     type: text_textfield

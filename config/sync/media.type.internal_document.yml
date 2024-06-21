@@ -1,0 +1,16 @@
+uuid: eaa3c8c0-8a1e-4fa6-857f-1b1c170ba756
+langcode: en
+status: true
+dependencies: {  }
+id: internal_document
+label: 'Internal Document'
+description: 'Internal documents only for company use only.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map:
+  name: field_document_file_name
+  mimetype: field_document_mime_type
+  filesize: field_document_size

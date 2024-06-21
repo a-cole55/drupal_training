@@ -13,9 +13,9 @@ dependencies:
     - node.type.author
   module:
     - datetime
+    - ds
     - field_layout
     - image
-    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -23,6 +23,35 @@ third_party_settings:
     id: layout_onecol
     settings:
       label: ''
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+          left:
+            author-left: author-left
+          right:
+            author-right: author-right
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - body
+        - links
+      right:
+        - field_author_photo
+        - field_author_country
+        - field_author_birth_date
 id: node.author.full
 targetEntityType: node
 bundle: author
@@ -33,8 +62,8 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
+    weight: 0
+    region: left
   field_author_birth_date:
     type: datetime_default
     label: inline
@@ -43,7 +72,7 @@ content:
       format_type: date_no_time
     third_party_settings: {  }
     weight: 4
-    region: content
+    region: right
   field_author_country:
     type: entity_reference_label
     label: inline
@@ -51,7 +80,7 @@ content:
       link: false
     third_party_settings: {  }
     weight: 3
-    region: content
+    region: right
   field_author_photo:
     type: image
     label: hidden
@@ -61,13 +90,13 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 1
-    region: content
+    weight: 2
+    region: right
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
+    weight: 1
+    region: left
 hidden:
   field_author_highlighted: true
   langcode: true

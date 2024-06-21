@@ -11,12 +11,12 @@ dependencies:
     - field.field.node.news.field_news_photo
     - field.field.node.news.field_news_section
     - field.field.node.news.field_news_video
+    - field.field.node.news.field_noticia_multimedia
     - image.style.thumbnail
     - node.type.news
   module:
     - field_layout
     - image
-    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -65,5 +65,6 @@ hidden:
   field_news_country: true
   field_news_section: true
   field_news_video: true
+  field_noticia_multimedia: true
   langcode: true
   search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 18ad3ef5-c255-46f3-85bd-eb26fa26b574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_document_departments
+    - media.type.internal_document
+    - taxonomy.vocabulary.departments
+id: media.internal_document.field_document_departments
+field_name: field_document_departments
+entity_type: media
+bundle: internal_document
+label: Departments
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments: departments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

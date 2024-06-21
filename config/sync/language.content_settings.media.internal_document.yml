@@ -1,0 +1,11 @@
+uuid: 28234b33-2d10-49ba-8b3b-eff7ee760540
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.internal_document
+id: media.internal_document
+target_entity_type_id: media
+target_bundle: internal_document
+default_langcode: site_default
+language_alterable: false

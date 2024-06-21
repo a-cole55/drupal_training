@@ -1,0 +1,94 @@
+uuid: 4a4ec6b4-71ff-4868-9408-3d8f4825648d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.lists
+    - field.field.node.author.body
+    - field.field.node.author.field_author_birth_date
+    - field.field.node.author.field_author_country
+    - field.field.node.author.field_author_highlighted
+    - field.field.node.author.field_author_photo
+    - image.style.photo_author_large
+    - node.type.author
+  module:
+    - ds
+    - field_layout
+    - image
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  ds:
+    layout:
+      id: ds_3col
+      library: ds/ds_3col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+          left: {  }
+          middle: {  }
+          right: {  }
+        wrappers:
+          left: div
+          middle: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - field_author_photo
+      middle:
+        - node_title
+        - body
+      right:
+        - 'dynamic_token_field:node-author_birth'
+    fields:
+      'dynamic_token_field:node-author_birth':
+        plugin_id: 'dynamic_token_field:node-author_birth'
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.author.lists
+targetEntityType: node
+bundle: author
+mode: lists
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: middle
+  field_author_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: photo_author_large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: left
+hidden:
+  field_author_birth_date: true
+  field_author_country: true
+  field_author_highlighted: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

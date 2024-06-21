@@ -1,0 +1,19 @@
+uuid: 8c77d659-11a9-43e4-b902-e133ba500491
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_document_file_name
+    - media.type.internal_document
+id: media.internal_document.field_document_file_name
+field_name: field_document_file_name
+entity_type: media
+bundle: internal_document
+label: 'File name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

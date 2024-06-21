@@ -14,3 +14,5 @@ enrollment_status: 0
 enrollment_status_message: 'Term %term already exists in vocabulary %vocabulary.'
 report_type: 0
 report_type_message: 'Term %term already exists in vocabulary %vocabulary.'
+departments: 0
+departments_message: 'Term %term already exists in vocabulary %vocabulary.'

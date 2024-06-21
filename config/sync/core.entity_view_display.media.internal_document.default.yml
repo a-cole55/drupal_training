@@ -1,0 +1,66 @@
+uuid: 7b7e41fb-f5b5-4177-8d29-ddcf1b11d835
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.internal_document.field_document_departments
+    - field.field.media.internal_document.field_document_file_name
+    - field.field.media.internal_document.field_document_mime_type
+    - field.field.media.internal_document.field_document_size
+    - field.field.media.internal_document.field_media_file
+    - media.type.internal_document
+  module:
+    - file
+id: media.internal_document.default
+targetEntityType: media
+bundle: internal_document
+mode: default
+content:
+  field_document_departments:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_document_file_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_document_mime_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_document_size:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media_file:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

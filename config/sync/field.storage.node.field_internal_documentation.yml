@@ -1,0 +1,20 @@
+uuid: 942d9d00-987a-4fcc-927e-cac89962ffc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_internal_documentation
+field_name: field_internal_documentation
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

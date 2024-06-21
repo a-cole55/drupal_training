@@ -11,15 +11,14 @@ dependencies:
     - field.field.node.news.field_news_photo
     - field.field.node.news.field_news_section
     - field.field.node.news.field_news_video
+    - field.field.node.news.field_noticia_multimedia
     - node.type.news
   module:
     - comment
     - field_layout
     - image
-    - layout_discovery
     - text
     - user
-    - video_embed_field
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -80,14 +79,11 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
-  field_news_video:
-    type: video_embed_field_video
+  field_noticia_multimedia:
+    type: entity_reference_label
     label: above
     settings:
-      autoplay: true
-      responsive: true
-      width: 854
-      height: 480
+      link: true
     third_party_settings: {  }
     weight: 7
     region: content
@@ -97,5 +93,6 @@ content:
     weight: 0
     region: content
 hidden:
+  field_news_video: true
   langcode: true
   search_api_excerpt: true

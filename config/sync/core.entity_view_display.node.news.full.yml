@@ -12,16 +12,15 @@ dependencies:
     - field.field.node.news.field_news_photo
     - field.field.node.news.field_news_section
     - field.field.node.news.field_news_video
+    - field.field.node.news.field_noticia_multimedia
     - image.style.medium
     - node.type.news
   module:
     - comment
     - field_layout
     - image
-    - layout_discovery
     - text
     - user
-    - video_embed_field
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -37,7 +36,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_news_comments:
     type: comment_default
@@ -54,14 +53,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
-    region: content
-  field_news_lead:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_news_photo:
     type: image
@@ -72,7 +64,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_news_section:
     type: entity_reference_label
@@ -80,18 +72,16 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
-  field_news_video:
-    type: video_embed_field_video
+  field_noticia_multimedia:
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      autoplay: true
-      responsive: true
-      width: 854
-      height: 480
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    weight: 7
+    weight: 5
     region: content
   links:
     settings: {  }
@@ -99,5 +89,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_news_lead: true
+  field_news_video: true
   langcode: true
   search_api_excerpt: true

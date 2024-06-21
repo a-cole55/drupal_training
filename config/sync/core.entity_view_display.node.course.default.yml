@@ -8,12 +8,12 @@ dependencies:
     - field.field.node.course.field_course_enrollments
     - field.field.node.course.field_course_location
     - field.field.node.course.field_course_start_date
+    - field.field.node.course.field_internal_documentation
     - field.field.node.course.field_title
     - node.type.course
   module:
     - datetime
     - field_layout
-    - layout_discovery
     - reference_table_formatter
     - text
     - user
@@ -41,7 +41,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_course_enrollments:
     type: entity_reference_table
@@ -68,7 +68,15 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 4
+    weight: 3
+    region: content
+  field_internal_documentation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_title:
     type: text_default
