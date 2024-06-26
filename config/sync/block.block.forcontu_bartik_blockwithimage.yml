@@ -1,6 +1,6 @@
 uuid: bab8255c-b0b8-40c0-8c39-0c08a70d5b6e
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:image_block:45895c63-5878-4ac1-98a1-ce6e602e3393'
@@ -11,7 +11,7 @@ dependencies:
 id: forcontu_bartik_blockwithimage
 theme: forcontu_bartik
 region: sidebar_second
-weight: -7
+weight: -15
 provider: null
 plugin: 'block_content:45895c63-5878-4ac1-98a1-ce6e602e3393'
 settings:

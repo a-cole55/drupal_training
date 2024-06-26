@@ -9,7 +9,7 @@ dependencies:
 id: forcontu_bartik_userlogin
 theme: forcontu_bartik
 region: sidebar_first
-weight: -11
+weight: -15
 provider: null
 plugin: user_login_block
 settings:

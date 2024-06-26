@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.field_weight
     - image.style.thumbnail
     - node.type.article
   module:
@@ -17,6 +18,7 @@ dependencies:
     - layout_discovery
     - path
     - text
+    - weight
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -68,6 +70,12 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_weight:
+    type: weight_selector
+    weight: 121
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

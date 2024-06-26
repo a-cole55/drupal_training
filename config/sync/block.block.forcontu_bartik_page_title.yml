@@ -9,7 +9,7 @@ _core:
 id: forcontu_bartik_page_title
 theme: forcontu_bartik
 region: sidebar_first
-weight: -13
+weight: -17
 provider: null
 plugin: page_title_block
 settings:

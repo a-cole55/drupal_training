@@ -9,7 +9,7 @@ dependencies:
 id: forcontu_bartik_hierarchicaltaxonomymenu
 theme: forcontu_bartik
 region: sidebar_first
-weight: -8
+weight: -11
 provider: null
 plugin: hierarchical_taxonomy_menu
 settings:

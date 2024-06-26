@@ -10,7 +10,7 @@ dependencies:
 id: forcontu_bartik_newforumtopics
 theme: forcontu_bartik
 region: sidebar_first
-weight: -9
+weight: -12
 provider: null
 plugin: forum_new_block
 settings:

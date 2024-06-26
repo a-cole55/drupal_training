@@ -14,7 +14,6 @@ dependencies:
   module:
     - field_layout
     - image
-    - layout_discovery
     - user
 third_party_settings:
   field_layout:
@@ -28,20 +27,13 @@ targetEntityType: user
 bundle: user
 mode: full
 content:
-  field_user_address:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: content
   field_user_first_name:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 2
     region: content
   field_user_last_name:
     type: string
@@ -49,23 +41,22 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 3
     region: content
-  field_user_zip_code:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
+  latest_comments_entity_view_1:
+    settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 4
     region: content
   masquerade:
     settings: {  }
     third_party_settings: {  }
-    weight: 50
+    weight: 5
     region: content
   member_for:
-    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
   user_picture:
     type: image
@@ -80,5 +71,7 @@ content:
     region: content
 hidden:
   field_contact_request_type: true
+  field_user_address: true
+  field_user_zip_code: true
   langcode: true
   search_api_excerpt: true

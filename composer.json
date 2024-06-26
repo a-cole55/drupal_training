@@ -38,6 +38,8 @@
         "drupal/editor_file": "^1.7",
         "drupal/entity_browser": "^2.10",
         "drupal/entity_usage": "^2.0@beta",
+        "drupal/entityqueue": "^1.8",
+        "drupal/eva": "^3.1",
         "drupal/field_group": "^3.4",
         "drupal/google_analytics": "^4.0",
         "drupal/hierarchical_taxonomy_menu": "^2.0@beta",
@@ -63,8 +65,12 @@
         "drupal/taxonomy_unique": "^2.5",
         "drupal/vani": "^10.0",
         "drupal/video_embed_field": "^2.5",
+        "drupal/views_accordion": "^2.0",
+        "drupal/views_infinite_scroll": "^2.0",
+        "drupal/views_slideshow": "^5.0",
         "drupal/viewsreference": "^2.0@beta",
         "drupal/webform": "^6.2",
+        "drupal/weight": "^3.4",
         "drush/drush": "^12"
     },
     "conflict": {

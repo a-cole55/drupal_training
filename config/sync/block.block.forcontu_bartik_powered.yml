@@ -11,7 +11,7 @@ _core:
 id: forcontu_bartik_powered
 theme: forcontu_bartik
 region: sidebar_first
-weight: -2
+weight: -5
 provider: null
 plugin: system_powered_by_block
 settings:

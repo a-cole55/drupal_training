@@ -11,7 +11,7 @@ dependencies:
 id: forcontu_bartik_sections
 theme: forcontu_bartik
 region: sidebar_second
-weight: 0
+weight: -6
 provider: null
 plugin: 'system_menu_block:sections'
 settings:

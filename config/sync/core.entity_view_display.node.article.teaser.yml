@@ -8,12 +8,12 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.field_weight
     - image.style.medium
     - node.type.article
   module:
     - field_layout
     - image
-    - layout_discovery
     - text
     - user
 third_party_settings:
@@ -62,5 +62,6 @@ hidden:
   comment: true
   field_image: true
   field_tags: true
+  field_weight: true
   langcode: true
   search_api_excerpt: true

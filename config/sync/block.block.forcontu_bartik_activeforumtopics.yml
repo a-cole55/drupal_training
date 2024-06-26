@@ -10,7 +10,7 @@ dependencies:
 id: forcontu_bartik_activeforumtopics
 theme: forcontu_bartik
 region: sidebar_first
-weight: -10
+weight: -13
 provider: null
 plugin: forum_active_block
 settings:
