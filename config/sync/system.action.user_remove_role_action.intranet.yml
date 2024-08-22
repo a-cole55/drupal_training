@@ -1,0 +1,14 @@
+uuid: 9cc9de05-f52a-4d95-a0eb-6cc71e555772
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.intranet
+  module:
+    - user
+id: user_remove_role_action.intranet
+label: 'Remove the Intranet role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: intranet

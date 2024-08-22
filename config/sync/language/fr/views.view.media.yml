@@ -10,6 +10,7 @@ display:
         thumbnail__target_id:
           separator: ', '
         name:
+          label: 'Nom du média'
           separator: ', '
         bundle:
           label: Type
@@ -47,11 +48,15 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       filters:
+        name:
+          expose:
+            label: 'Nom du média'
         bundle:
           expose:
             label: Type
         status:
           group_info:
+            label: 'Statut de publication'
             group_items:
               1:
                 title: Publié

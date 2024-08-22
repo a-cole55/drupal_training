@@ -1,0 +1,11 @@
+uuid: 5953a57e-921b-4a90-a0d6-001dd32c2bd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.intranet
+id: node.intranet
+target_entity_type_id: node
+target_bundle: intranet
+default_langcode: site_default
+language_alterable: false

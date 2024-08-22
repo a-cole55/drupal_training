@@ -8,6 +8,7 @@ dependencies:
     - block_content
     - comment
     - contact
+    - field_permissions
     - field_ui
     - help
     - node
@@ -34,15 +35,20 @@ permissions:
   - 'administer nodes'
   - 'administer search'
   - 'create article content'
+  - 'create field_publication_sales'
   - 'create url aliases'
   - 'delete all revisions'
   - 'delete any article content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'edit any article content'
+  - 'edit field_publication_sales'
   - 'edit own article content'
+  - 'edit own field_publication_sales'
   - 'revert all revisions'
   - 'revert article revisions'
   - 'view all revisions'
   - 'view article revisions'
+  - 'view field_publication_sales'
+  - 'view own field_publication_sales'
   - 'view the administration theme'

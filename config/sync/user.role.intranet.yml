@@ -1,0 +1,16 @@
+uuid: c1c28c35-f4f2-4c92-9a70-6ccf38a12774
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.intranet
+  module:
+    - node
+id: intranet
+label: Intranet
+weight: 5
+is_admin: null
+permissions:
+  - 'create intranet content'
+  - 'delete own intranet content'
+  - 'edit own intranet content'

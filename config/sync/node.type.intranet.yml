@@ -1,0 +1,18 @@
+uuid: 2bebbbe1-f021-4e28-a087-e1992df49787
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Intranet
+type: intranet
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

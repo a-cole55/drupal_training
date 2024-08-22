@@ -1,0 +1,14 @@
+uuid: 74ea1930-6b49-4bd8-9b7e-22fead7a39d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.intranet
+  module:
+    - user
+id: user_add_role_action.intranet
+label: 'Add the Intranet role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: intranet

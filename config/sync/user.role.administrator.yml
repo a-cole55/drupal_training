@@ -1,11 +1,18 @@
 uuid: 8ee5e67e-e1af-4a57-ad46-878bee23153d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - field_permissions
 _core:
   default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
 id: administrator
 label: Administrator
 weight: 3
 is_admin: true
-permissions: {  }
+permissions:
+  - 'create field_publication_sales'
+  - 'edit field_publication_sales'
+  - 'edit own field_publication_sales'
+  - 'view field_publication_sales'
+  - 'view own field_publication_sales'

@@ -10,6 +10,7 @@ display:
         thumbnail__target_id:
           separator: ', '
         name:
+          label: Medienname
           separator: ', '
         bundle:
           label: Typ
@@ -43,15 +44,19 @@ display:
         options:
           submit_button: Filter
           reset_button_label: Zurücksetzen
-          exposed_sorts_label: 'Sortieren nach'
+          exposed_sorts_label: Sortierung
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
       filters:
+        name:
+          expose:
+            label: Medienname
         bundle:
           expose:
             label: Typ
         status:
           group_info:
+            label: Veröffentlichungsstatus
             group_items:
               1:
                 title: Veröffentlicht
